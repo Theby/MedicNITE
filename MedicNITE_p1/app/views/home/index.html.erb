@@ -1,1 +1,24 @@
-<h1>Bienvenido a nuestra aplicación Web</h1>
+<div class="titulo-h1"><h1>Bienvenido a MedicNITE</h1></div>
+
+    <div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+	    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	    <li data-target="#myCarousel" data-slide-to="1"></li>
+	    <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+	    <div class="active item">
+	    	<%= image_tag("hospitalbl1.jpeg", :size => "800x600") %>
+	    </div>
+	    <div class="item">
+	    	<%= image_tag("hospitalbl2.jpeg", :size => "800x600") %>
+	    </div>
+	    <div class="item">
+	    	<%= image_tag("hospitalbl3.jpeg", :size => "800x600") %>
+	    </div>
+    </div>
+    <!-- Carousel nav -->
+    <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>
