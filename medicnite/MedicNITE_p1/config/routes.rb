@@ -1,8 +1,6 @@
 MedicNITEP1::Application.routes.draw do
-  resources :personas
-
   devise_for :usuarios
-  resources :redirector, :administrador, :administrativo
+  resources :dashboard, :manejo_areas, :manejo_recintos, :manejo_personas
 
   root to: "home#index"
 
