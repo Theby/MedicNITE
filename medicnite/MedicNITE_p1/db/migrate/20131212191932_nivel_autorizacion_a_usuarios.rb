@@ -1,6 +1,6 @@
 class NivelAutorizacionAUsuarios < ActiveRecord::Migration
   def change
-  	drop_table :usuarios
+  	#drop_table :usuarios
   	create_table(:usuarios) do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""

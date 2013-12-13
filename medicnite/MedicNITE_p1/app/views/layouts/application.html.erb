@@ -33,6 +33,7 @@
     <!-- For all other devices -->
     <!-- Size should be 32 x 32 pixels -->
     <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
 
     <%= javascript_include_tag "application" %>
   </head>
@@ -60,8 +61,8 @@
 
             <div id="usuario_nav" class="usuario-nav-style">
       				<% if usuario_signed_in? %>
-      					Signed in as <%= current_usuario.email %>. ¿No eres tu?
-      					<%= link_to "Sign out", destroy_usuario_session_path, :method => :delete %>
+      					<div class="texto-nav"><%= current_usuario.email %>
+      					<%= link_to "Sign out", destroy_usuario_session_path, :method => :delete %></div>
       				<% else %>
       					<%= link_to "Sign up", new_usuario_registration_path %> o <%= link_to "Sign in", new_usuario_session_path %>
       				<% end %>
@@ -83,9 +84,9 @@
           </div>
           
         </div><!--/row-->
-
+      <br></br>
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>InforNITE &copy; Company 2013</p>
       </footer>
 
     </div> <!-- /container -->
