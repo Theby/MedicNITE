@@ -1,6 +1,7 @@
-class DeviseCreateUsuarios < ActiveRecord::Migration
+class AgregaIdpersonaNonull < ActiveRecord::Migration
   def change
-    create_table(:usuarios) do |t|
+  	#drop_table :usuarios
+  	create_table(:usuarios) do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""
       t.string :encrypted_password, :null => false, :default => ""
@@ -20,9 +21,9 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       ## exedente db
-      t.integer  :autorizacion_usuario, :null => false, :default => 0
-      t.integer  :ID_PERSONA, :default => 0, :null => false
-      t.string   :CODIGO_SEGURIDAD_USUARIO, :default => "usuario"
+      t.integer  :autorizacion_usuario,	:null => false, :default => 0
+      t.integer	 :ID_PERSONA, :default => 0, :null => false
+      t.string	 :CODIGO_SEGURIDAD_USUARIO, :default => "usuario"
       t.integer  :ESTADO_CUENTA_USUARIO, :default => 1
 
       ## Confirmable
@@ -45,4 +46,5 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
     # add_index :usuarios, :confirmation_token,   :unique => true
     # add_index :usuarios, :unlock_token,         :unique => true
   end
+
 end
