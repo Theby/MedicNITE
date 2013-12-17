@@ -21,9 +21,10 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
 
       ## exedente db
       t.integer  :autorizacion_usuario, :null => false, :default => 0
-      t.integer  :ID_PERSONA, :default => 0, :null => false
-      t.string   :CODIGO_SEGURIDAD_USUARIO, :default => "usuario"
-      t.integer  :ESTADO_CUENTA_USUARIO, :default => 1
+      t.integer  :idPersona, :default => 0, :null => false
+      t.string   :codigoSeguridadUsuario, :default => "usuario"
+      t.integer  :estadoCuentaUsuario, :default => 1
+
 
       ## Confirmable
       # t.string   :confirmation_token
