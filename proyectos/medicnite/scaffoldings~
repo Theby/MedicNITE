@@ -1,5 +1,0 @@
-//Genera "personas": modelo, controlador y vistas. 
-rails g scaffold personas rutPersona:string nombresPersona:string apellidopaternoPersona:string apellidomaternoPersona:string
-
-//Agrega el tema de bootstrap a "personas"
-rails g bootstrap:themed personas
