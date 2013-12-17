@@ -9,3 +9,6 @@ rails g scaffold tipoPersona nombreTipoPersona:string
 
 //Agrega el tema de bootstrap a "tipoPersonas"
 rails g bootstrap:themed tipoPersonas
+
+//Genera "tipoperClasificaPer":
+rails g model tipoperClasificaPer idTipoPersona:integer idPersona:integer

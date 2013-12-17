@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131217013200) do
+ActiveRecord::Schema.define(version: 20131217031603) do
 
   create_table "personas", force: true do |t|
     t.string   "rutPersona"
@@ -24,6 +24,13 @@ ActiveRecord::Schema.define(version: 20131217013200) do
 
   create_table "tipo_personas", force: true do |t|
     t.string   "nombreTipoPersona"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tipoper_clasifica_pers", force: true do |t|
+    t.integer  "idTipoPersona", null: false
+    t.integer  "idPersona",     null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
