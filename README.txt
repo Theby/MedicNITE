@@ -23,3 +23,8 @@ Cualquier duda de Git me preguntan
 =========
 
 Set up: Cómo comenzar a trabajar y aspectos básicos necesarios
+
+1) realizar un clone del repositorio:
+	git clone https://myuser@github.com/PBD-InforNITE/MedicNITE.git "nombre"
+Donde myuser es tu nombre de usuario y "nombre" es el nombre de la carpeta donde se guardará el repositorio,
+si "nombre" no se especifica se creará una carpeta llamada MedicNITE que contendrá al repositorio.
