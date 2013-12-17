@@ -1,4 +1,6 @@
 MedicNITEP1::Application.routes.draw do
+  resources :tipo_personas
+
   resources :personas
 
   devise_for :usuarios
