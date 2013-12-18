@@ -25,27 +25,35 @@ Cualquier duda de Git me preguntan
 Set up: Cómo comenzar a trabajar y aspectos básicos necesarios
 
 1) realizar un clone del repositorio:
-	git clone https://myuser@github.com/PBD-InforNITE/MedicNITE.git "nombre"
+	"git clone https://myuser@github.com/PBD-InforNITE/MedicNITE.git "nombre""
 Donde myuser es tu nombre de usuario y "nombre" es el nombre de la carpeta donde se guardará el repositorio,
 si "nombre" no se especifica se creará una carpeta llamada MedicNITE que contendrá al repositorio.
 
 2) Luego realizar cd "nombre" o MedicNite según corresponda.
 Finalmente:
-	git pull
+	"git pull" o bien "git pull origin master"
 
 Para actualizar todo el contenido
 
 3) Ingresar a la carpeta del proyecto
-	cd MedicNITE/MedicNITE_p1
+	"cd MedicNITE/MedicNITE_p1"
 
 MedicNITE_p1 corresponde a la carpeta del proyecto, los siguientes pasos deben ejecutarse desde
 dentro de esta carpeta
 
 4) sincronizar gemas de proyecto
 
-Una vez clonado el proyecto de git se deben sincronizar las gemas de Ruby del proyecto con las del computador.
-Para sincronizar las gemas con las que el proyecto utiliza y el propio repositorio, usar el comando: 
+Para sincronizar las gemas con las que el proyecto utiliza y las instaladas en el computador, usar el comando: 
 	"bundle install"
+
+La cual intalara las versiones correspondientes para que exista compatibilidad.
+
+		ERRORES CONOCIDOS:
+			>Error installing mysql2 (0.3.14)
+			Para resolver esto se debe tener previamente instalada la gema y librerias necesarias de mysql2
+				"sudo apt-get install libmysql-ruby libmysqlclient-dev"
+				"gem install mysql2 -v 0.3.14"
+
 
 5) Crear base de datos
 
@@ -53,15 +61,32 @@ Si es primera vez que se carga el proyecto, es necesario crear la base de datos 
 utilizará. Para esto se usa el comando:
 	"rake db:create"
 
+		ERRORES CONOCIDOS:
+			>Couldn't create database for {"adapter"=>"mysql2", "encoding"=>"utf8", "database"=>"MedicNITE_p1_development", "pool"=>5, "username"=>"root", "password"=>"root", "socket"=>"/var/run/mysqld/mysqld.sock"}, {:charset=>"utf8", :collation=>"utf8_unicode_ci"}
+			(If you set the charset manually, make sure you have a matching collation)
+			Tras varias busquedas en la web me dí cuenta que hay millones de razones por la que esto puede suceder,
+			en mi caso ocurrió que no estaba instalado mysql (es decir no tenía un socket) por lo que la solución fue
+				"sudo apt-get install mysql-client-5.1"
+				"sudo apt-get install mysql-server-5.1"
+			Y por seguridad
+				"gem install mysql"
+				"gem install mysql2"
+
 6) Iniciar Servidor Rails
 
 Para iniciar el servidor, usar el comando: 
 	"rails s"
 
+Esto permite ingresar a la pagina mediante http://0.0.0.0:3000
+
+		ERRORES CONOCIDOS:
+			Migrations are pending; run 'bin/rake db:migrate RAILS_ENV=development' to resolve this issue.
+			(No resuelto)
+
 7) Recurso Básico
 
 Para generar un recurso básico [model | controller | view], usar el comando: 
-	"rails g [Recurso Básico] [Nombre del recurso]
+	"rails g [Recurso Básico] [Nombre del recurso]""
 
 8) Entidad principal
 
