@@ -45,6 +45,8 @@ Para sincronizar las gemas con las que el proyecto utiliza y el propio repositor
 Si es primera vez que se carga el proyecto, es necesario crear la base de datos que el proyecto descargado
 utilizará. Para esto se usa el comando:
 	"rake db:create"
+Y luego migrar la DB (Si hay errores, agregar a cada migración antes de crear una tabla el script "drop_table: name_table"):
+	"rake db:migrate"
 
 4) Iniciar Servidor Rails
 
