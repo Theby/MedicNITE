@@ -24,6 +24,10 @@ Cualquier duda de Git me preguntan
 
 Set up: Cómo comenzar a trabajar y aspectos básicos necesarios
 
+0) Instalar Ruby on Rails + MySQL:
+Estos pasos quizá puedan variar para distintas distribuciones de Linux. Pero deben ser parecidas a este tutorial:
+http://gorails.com/setup/ubuntu/13.10
+
 1) realizar un clone del repositorio:
 	git clone https://myuser@github.com/PBD-InforNITE/MedicNITE.git "nombre"
 Donde myuser es tu nombre de usuario y "nombre" es el nombre de la carpeta donde se guardará el repositorio,
