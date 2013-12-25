@@ -28309,3 +28309,2893 @@ Migrating to DeviseCreateUsuarios (20131202002730)
   [1m[35mSQL (0.6ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131202002730')
   [1m[36m (103.6ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreatePersonas (20131225183821)
+  [1m[35m (102.6ms)[0m  CREATE TABLE `personas` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `nombresPersona` varchar(40), `apellidosPersona` varchar(40), `fechaNacimientoPersona` date, `rutPersona` varchar(10), `domicilioPersona` varchar(40), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20131225183821')
+  [1m[36m (33.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-25 15:39:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 415ms (Views: 373.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/hospitalbl1.jpeg" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/hospitalbl2.jpeg" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/assets/hospitalbl3.jpeg" for 127.0.0.1 at 2013-12-25 15:39:52 -0300
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (75.1ms)
+Completed 200 OK in 174ms (Views: 152.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:39:59 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:00 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:40:01 -0300
+
+
+Started POST "/usuarios" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MKBpOVU8CK1Tr24SiJWedTz/N/i9n6qlIeczIY4BfaQ=", "usuario"=>{"email"=>"sylarsith@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUsuario Exists (0.9ms)[0m  [1mSELECT 1 AS one FROM `usuarios` WHERE `usuarios`.`email` = BINARY 'sylarsith@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO `usuarios` (`created_at`, `email`, `encrypted_password`, `updated_at`) VALUES ('2013-12-25 18:40:08', 'sylarsith@gmail.com', '$2a$10$sUjh/4Bw/7l5CEKKbGYZuOKGCifRu7xfkO2YK4iPfgnrutyR7Xr/6', '2013-12-25 18:40:08')
+  [1m[36m (38.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mUPDATE `usuarios` SET `last_sign_in_at` = '2013-12-25 18:40:08', `current_sign_in_at` = '2013-12-25 18:40:08', `last_sign_in_ip` = '127.0.0.1', `current_sign_in_ip` = '127.0.0.1', `sign_in_count` = 1, `updated_at` = '2013-12-25 18:40:08' WHERE `usuarios`.`id` = 1[0m
+  [1m[35m (27.9ms)[0m  COMMIT
+Redirected to http://0.0.0.0:3000/
+Completed 302 Found in 280ms (ActiveRecord: 69.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.7ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/dashboard
+Completed 302 Found in 50ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+Processing by DashboardController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered dashboard/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 39ms (Views: 36.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:40:09 -0300
+
+
+Started GET "/personas" for 127.0.0.1 at 2013-12-25 15:40:11 -0300
+Processing by PersonasController#index as HTML
+  [1m[36mPersona Load (0.5ms)[0m  [1mSELECT `personas`.* FROM `personas`[0m
+  Rendered personas/index.html.erb within layouts/application (3.7ms)
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+Completed 200 OK in 82ms (Views: 74.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:40:12 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:22 -0300
+
+
+Started GET "/personas" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+Processing by PersonasController#index as HTML
+  [1m[36mPersona Load (0.2ms)[0m  [1mSELECT `personas`.* FROM `personas`[0m
+  Rendered personas/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:40:23 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:25 -0300
+
+
+Started GET "/manejo_recintos" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+Processing by ManejoRecintosController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered manejo_recintos/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 40ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:26 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:27 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:27 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:40:27 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:27 -0300
+
+
+Started GET "/manejo_areas" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+Processing by ManejoAreasController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered manejo_areas/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+
+
+Started GET "/personas" for 127.0.0.1 at 2013-12-25 15:40:28 -0300
+Processing by PersonasController#index as HTML
+  [1m[36mPersona Load (0.3ms)[0m  [1mSELECT `personas`.* FROM `personas`[0m
+  Rendered personas/index.html.erb within layouts/application (2.1ms)
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+Completed 200 OK in 55ms (Views: 52.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:40:29 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:40:34 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+Processing by DashboardController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered dashboard/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 85ms (Views: 81.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:41:28 -0300
+
+
+Started GET "/manejo_personas" for 127.0.0.1 at 2013-12-25 15:41:29 -0300
+Processing by ManejoPersonasController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered manejo_personas/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 48ms (Views: 43.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:29 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:41:30 -0300
+
+
+Started GET "/manejo_recintos" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+Processing by ManejoRecintosController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered manejo_recintos/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 42ms (Views: 39.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:41:31 -0300
+
+
+Started GET "/manejo_areas" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+Processing by ManejoAreasController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered manejo_areas/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 82ms (Views: 80.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:41:32 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:41:36 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:41:42 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:41:44 -0300
+
+
+Started GET "/personas" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+Processing by PersonasController#index as HTML
+  [1m[35mPersona Load (0.3ms)[0m  SELECT `personas`.* FROM `personas`
+  Rendered personas/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+Completed 200 OK in 47ms (Views: 45.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:41:48 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:42:30 -0300
+
+
+Started GET "/manejo_recintos" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+Processing by ManejoRecintosController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered manejo_recintos/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 43ms (Views: 39.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:42:31 -0300
+
+
+Started GET "/manejo_personas" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+Processing by ManejoPersonasController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered manejo_personas/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 67ms (Views: 62.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:33 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:42:34 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.6ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+Redirected to http://0.0.0.0:3000/dashboard
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUsuario Load (0.4ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 38.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:42:56 -0300
+
+
+Started GET "/home" for 127.0.0.1 at 2013-12-25 15:43:11 -0300
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  actionpack (4.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.1) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.1) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.0.1) lib/rails/engine.rb:511:in `call'
+  railties (4.0.1) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /home/sylar/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /home/sylar/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /home/sylar/.rvm/rubies/ruby-2.0.0-p353/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/sylar/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /home/sylar/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.0ms)
+  Rendered /home/sylar/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.5ms)
+  Rendered /home/sylar/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (89.0ms)
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:40 -0300
+
+
+Started GET "/manejo_areas" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+Processing by ManejoAreasController#index as HTML
+  [1m[35mUsuario Load (0.2ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered manejo_areas/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:41 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:43:42 -0300
+
+
+Started GET "/manejo_personas" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+Processing by ManejoPersonasController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered manejo_personas/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 75ms (Views: 71.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+Processing by HomeController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+Redirected to http://0.0.0.0:3000/dashboard
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+Processing by DashboardController#index as HTML
+  [1m[36mUsuario Load (0.2ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered dashboard/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 37ms (Views: 34.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:43 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:44 -0300
+
+
+Started GET "/manejo_personas" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+Processing by ManejoPersonasController#index as HTML
+  [1m[35mUsuario Load (0.5ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered manejo_personas/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:45 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/manejo_recintos" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+Processing by ManejoRecintosController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered manejo_recintos/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:43:46 -0300
+
+
+Started GET "/manejo_areas" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+Processing by ManejoAreasController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered manejo_areas/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 43ms (Views: 39.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:43:47 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (0.3ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+Redirected to http://0.0.0.0:3000/dashboard
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+Processing by DashboardController#index as HTML
+  [1m[35mUsuario Load (0.4ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 1 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered dashboard/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 66ms (Views: 62.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:51 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-25 15:43:52 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-25 15:43:52 -0300

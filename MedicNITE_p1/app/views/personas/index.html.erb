@@ -1,74 +1,35 @@
-<h1>Bienvenido a panel de control</h1>
+<h1>Listing personas</h1>
 
-<%= current_usuario.email %><br></br>
-
-<div class="panel panel-default">
-    <div class="panel-body">
-
-    <ul class="nav nav-tabs">
-      <li class="active"><a href="/">Inicio</a></li>
-      <li><%= link_to "Manejo Personas", :personas %></li>
-      <li><%= link_to "Manejo Recintos", :manejo_recintos %></li>
-      <li><%= link_to "Manejo Áreas", :manejo_areas %></li>
-      <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-          Configuración <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Perfil</a></li>
-          <li><a href="#">Solicitud</a></li>
-          <li class="divider"></li>
-          <li><a href="#"><%= link_to "Cerrar Sesión", destroy_usuario_session_path, :method => :delete %></a></li>
-        </ul>
-      </li>
-    </ul>
-
-
-<%- model_class = Persona -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
-<table class="table table-striped">
+<table>
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:rutPersona) %></th>
-      <th><%= model_class.human_attribute_name(:nombresPersona) %></th>
-      <th><%= model_class.human_attribute_name(:apellidopaternoPersona) %></th>
-      <th><%= model_class.human_attribute_name(:apellidomaternoPersona) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+      <th>Nombrespersona</th>
+      <th>Apellidospersona</th>
+      <th>Fechanacimientopersona</th>
+      <th>Rutpersona</th>
+      <th>Domiciliopersona</th>
+      <th></th>
+      <th></th>
+      <th></th>
     </tr>
   </thead>
+
   <tbody>
     <% @personas.each do |persona| %>
       <tr>
-        <td><%= link_to persona.id, persona_path(persona) %></td>
-        <td><%= persona.rutPersona %></td>
         <td><%= persona.nombresPersona %></td>
-        <td><%= persona.apellidopaternoPersona %></td>
-        <td><%= persona.apellidomaternoPersona %></td>
-        <td><%=l persona.created_at %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_persona_path(persona), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      persona_path(persona),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
+        <td><%= persona.apellidosPersona %></td>
+        <td><%= persona.fechaNacimientoPersona %></td>
+        <td><%= persona.rutPersona %></td>
+        <td><%= persona.domicilioPersona %></td>
+        <td><%= link_to 'Show', persona %></td>
+        <td><%= link_to 'Edit', edit_persona_path(persona) %></td>
+        <td><%= link_to 'Destroy', persona, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_persona_path,
-            :class => 'btn btn-primary' %>
+<br>
 
-<br></br>
-
-    </div>
-</div>
-
+<%= link_to 'New Persona', new_persona_path %>
