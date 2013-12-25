@@ -20,10 +20,11 @@ class DeviseCreateUsuarios < ActiveRecord::Migration
       t.string   :last_sign_in_ip
 
       ## exedente db
-      t.integer  :autorizacion_usuario, :null => false, :default => 0
+      t.string   :nombreUsuario
+      t.integer  :nivelAutorizacion, :null => false, :default => 0
       t.integer  :idPersona, :default => 0, :null => false
-      t.string   :codigoSeguridadUsuario, :default => "usuario"
-      t.integer  :estadoCuentaUsuario, :default => 1
+      t.string   :codAccion, :default => "usuario"
+      t.integer  :estadoUsuario, :default => 0
 
 
       ## Confirmable

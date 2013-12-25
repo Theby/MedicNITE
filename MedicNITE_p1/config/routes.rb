@@ -1,8 +1,4 @@
 MedicNITEP1::Application.routes.draw do
-  resources :personas
-
-  resources :tipo_personas
-
   devise_for :usuarios
   resources :dashboard, :manejo_areas, :manejo_recintos, :manejo_personas
 

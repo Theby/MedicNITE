@@ -11,29 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131217031603) do
-
-  create_table "personas", force: true do |t|
-    t.string   "rutPersona"
-    t.string   "nombresPersona"
-    t.string   "apellidopaternoPersona"
-    t.string   "apellidomaternoPersona"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tipo_personas", force: true do |t|
-    t.string   "nombreTipoPersona"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "tipoper_clasifica_pers", force: true do |t|
-    t.integer  "idTipoPersona", null: false
-    t.integer  "idPersona",     null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20131202002730) do
 
   create_table "usuarios", force: true do |t|
     t.string   "email",                  default: "",        null: false
@@ -46,10 +24,11 @@ ActiveRecord::Schema.define(version: 20131217031603) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.integer  "autorizacion_usuario",   default: 0,         null: false
+    t.string   "nombreUsuario"
+    t.integer  "nivelAutorizacion",      default: 0,         null: false
     t.integer  "idPersona",              default: 0,         null: false
-    t.string   "codigoSeguridadUsuario", default: "usuario"
-    t.integer  "estadoCuentaUsuario",    default: 1
+    t.string   "codAccion",              default: "usuario"
+    t.integer  "estadoUsuario",          default: 0
     t.datetime "created_at"
     t.datetime "updated_at"
   end
