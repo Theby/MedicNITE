@@ -1,0 +1,2 @@
+module ManejoPersonasHelper
+end
