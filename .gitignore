@@ -8,5 +8,8 @@
 /.bundle
 
 # Ignore all logfiles and tempfiles.
-/log
-/tmp
+MedicNITE_p1/log
+MedicNITE_p1/tmp
+
+# Ignore database.yml para mantener las claves personales para cada pc (gracias Peter)
+MedicNITE_p1/config/database.yml
