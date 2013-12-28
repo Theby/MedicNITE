@@ -1,4 +1,5 @@
-rails g scaffold paciente perIdPersona:integer idPersona:integer idTipoPaciente:integer idEstadoPaciente:integer
+persona:
 
-rails g scaffold pacienteEstados estadoPaciente:string{40}
+rails g scaffold persona idPersona:integer domicilioPersona:string{40} nombresPersona:string{40} apellidosPersona:string{40} fechaNacimientoPersona:date rutPersona:string{10} --no-migration
 
+rails g bootstrap:themed personas
