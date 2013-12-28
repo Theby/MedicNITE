@@ -4,6 +4,7 @@ MedicNITEP1::Application.routes.draw do
   devise_for :usuarios
   resources :home, :dashboard, :manejo_areas, :manejo_recintos, :manejo_personas
 
+
   root to: "home#index"
 
   # The priority is based upon order of creation: first created -> highest priority.
