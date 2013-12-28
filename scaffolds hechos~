@@ -1,0 +1,1 @@
+rails g scaffold paciente perIdPersona:integer idPersona:integer idTipoPaciente:integer idEstadoPaciente:integer

@@ -11,7 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131225183821) do
+ActiveRecord::Schema.define(version: 20131228212249) do
+
+  create_table "paciente_estados", force: true do |t|
+    t.string   "estadoPaciente", limit: 40
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "paciente_tipos", force: true do |t|
+    t.string   "tipoPaciente", limit: 20
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pacientes", force: true do |t|
+    t.integer  "perIdPersona"
+    t.integer  "idPersona"
+    t.integer  "idTipoPaciente"
+    t.integer  "idEstadoPaciente"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "personas", force: true do |t|
     t.string   "nombresPersona",         limit: 40
