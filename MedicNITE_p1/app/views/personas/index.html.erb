@@ -1,46 +1,93 @@
-<%- model_class = Persona -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-</div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:idPersona) %></th>
-      <th><%= model_class.human_attribute_name(:domicilioPersona) %></th>
-      <th><%= model_class.human_attribute_name(:nombresPersona) %></th>
-      <th><%= model_class.human_attribute_name(:apellidosPersona) %></th>
-      <th><%= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>
-      <th><%= model_class.human_attribute_name(:rutPersona) %></th>
-      <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @personas.each do |persona| %>
-      <tr>
-        <td><%= link_to persona.id, persona_path(persona) %></td>
-        <td><%= persona.idPersona %></td>
-        <td><%= persona.domicilioPersona %></td>
-        <td><%= persona.nombresPersona %></td>
-        <td><%= persona.apellidosPersona %></td>
-        <td><%= persona.fechaNacimientoPersona %></td>
-        <td><%= persona.rutPersona %></td>
-        <!--<td><%#= persona.created_at %></td> -->
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_persona_path(persona), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      persona_path(persona),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<br></br>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ol class="breadcrumb">
+    <li><a href="/"><h4>Panel de control</h4></a></li> 
+    <li class="active"><h4>/ Administración de Personas</h4></li>
+  </div>
+  <div class="panel-body">
 
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_persona_path,
-            :class => 'btn btn-primary' %>
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Ingresar Paciente
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        Por Implementar
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Ingresar Personal del Médico
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+          Por Implementar
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        Listar Personas
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+          <%- model_class = Persona -%>
+          <div class="page-header">
+            <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+          </div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th><%= model_class.human_attribute_name(:id) %></th>
+                <th><%= model_class.human_attribute_name(:nombresPersona) %></th>
+                <th><%= model_class.human_attribute_name(:apellidosPersona) %></th>
+                <th><%= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>
+                <th><%= model_class.human_attribute_name(:rutPersona) %></th>
+                <th><%= model_class.human_attribute_name(:domicilioPersona) %></th>
+                <th><%= model_class.human_attribute_name(:created_at) %></th>
+                <th><%=t '.actions', :default => t("helpers.actions") %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @personas.each do |persona| %>
+                <tr>
+                  <td><%= link_to persona.id, persona_path(persona) %></td>
+                  <td><%= persona.nombresPersona %></td>
+                  <td><%= persona.apellidosPersona %></td>
+                  <td><%= persona.fechaNacimientoPersona %></td>
+                  <td><%= persona.rutPersona %></td>
+                  <td><%= persona.domicilioPersona %></td>
+                  <td><%= persona.created_at %></td>
+                  <td>
+                    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                                edit_persona_path(persona), :class => 'btn btn-mini' %>
+                    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                                persona_path(persona),
+                                :method => :delete,
+                                :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                                :class => 'btn btn-mini btn-danger' %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+
+          <%= link_to t('.new', :default => t("helpers.links.new")),
+                      new_persona_path, :class => 'btn btn-primary' %>     
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+</div>

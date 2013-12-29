@@ -1,0 +1,29 @@
+<h1>Listing paciente_estados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idestadopaciente</th>
+      <th>Estadopaciente</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paciente_estados.each do |paciente_estado| %>
+      <tr>
+        <td><%= paciente_estado.idEstadoPaciente %></td>
+        <td><%= paciente_estado.estadoPaciente %></td>
+        <td><%= link_to 'Show', paciente_estado %></td>
+        <td><%= link_to 'Edit', edit_paciente_estado_path(paciente_estado) %></td>
+        <td><%= link_to 'Destroy', paciente_estado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paciente estado', new_paciente_estado_path %>

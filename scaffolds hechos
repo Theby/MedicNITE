@@ -3,3 +3,14 @@ persona:
 rails g scaffold persona idPersona:integer domicilioPersona:string{40} nombresPersona:string{40} apellidosPersona:string{40} fechaNacimientoPersona:date rutPersona:string{10} --no-migration
 
 rails g bootstrap:themed personas
+
+paciente:
+
+rails g scaffold paciente perIdPersona:integer idPersona:integer idTipoPaciente:integer idEstadoPaciente:integer --no-migration
+
+rails g scaffold pacienteTipo idTipoPaciente:integer tipoPaciente:string{20} --no-migration
+
+rails g scaffold pacienteEstado idEstadoPaciente:integer estadoPaciente:string{40} --no-migration
+
+
+

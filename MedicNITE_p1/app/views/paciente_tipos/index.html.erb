@@ -1,0 +1,29 @@
+<h1>Listing paciente_tipos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idtipopaciente</th>
+      <th>Tipopaciente</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @paciente_tipos.each do |paciente_tipo| %>
+      <tr>
+        <td><%= paciente_tipo.idTipoPaciente %></td>
+        <td><%= paciente_tipo.tipoPaciente %></td>
+        <td><%= link_to 'Show', paciente_tipo %></td>
+        <td><%= link_to 'Edit', edit_paciente_tipo_path(paciente_tipo) %></td>
+        <td><%= link_to 'Destroy', paciente_tipo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paciente tipo', new_paciente_tipo_path %>
