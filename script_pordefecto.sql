@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     24-12-13 04:36:24                            */
+/* Created on:     30-12-13 01:55:32                            */
 /*==============================================================*/
 
 
@@ -14,7 +14,7 @@ drop table if exists camas;
 
 drop table if exists desocupamientoRecintos;
 
-drop table if exists habitacion;
+drop table if exists habitacions;
 
 drop table if exists historialUsuarios;
 
@@ -32,9 +32,9 @@ drop table if exists personalRubros;
 
 drop table if exists personas;
 
-drop table if exists reserva;
-
 drop table if exists reservaTipos;
+
+drop table if exists reservas;
 
 drop table if exists salas;
 
@@ -45,7 +45,7 @@ drop table if exists usuarios;
 /*==============================================================*/
 create table areas
 (
-   idArea               int not null,
+   idArea               int not null auto_increment,
    especialidadArea     varchar(20) not null,
    primary key (idArea)
 );
@@ -55,7 +55,7 @@ create table areas
 /*==============================================================*/
 create table asignacionTipos
 (
-   idTipoAsignacion     int not null,
+   idTipoAsignacion     int not null auto_increment,
    tipoAsignacion       varchar(40),
    primary key (idTipoAsignacion)
 );
@@ -65,11 +65,11 @@ create table asignacionTipos
 /*==============================================================*/
 create table asignaciones
 (
-   idAsignacion         int not null,
+   idAsignacion         int not null auto_increment,
    perIdpersona         int,
    pacIdpersona         int,
    idPersona            int,
-   idUsuario            int not null,
+   id                   int not null default 0,
    idSala               int,
    idTipoAsignacion     int not null,
    idCama               int,
@@ -86,7 +86,7 @@ create table asignaciones
 /*==============================================================*/
 create table camas
 (
-   idCama               int not null,
+   idCama               int not null auto_increment,
    idArea               int,
    idHabitacion         int,
    idSala               int,
@@ -101,7 +101,7 @@ create table camas
 /*==============================================================*/
 create table desocupamientoRecintos
 (
-   idDesocupamientoRecinto int not null,
+   idDesocupamientoRecinto int not null auto_increment,
    idAsignacion         int,
    fechaDesocupamiento  date not null,
    horaDesocupamiento   time not null,
@@ -109,11 +109,11 @@ create table desocupamientoRecintos
 );
 
 /*==============================================================*/
-/* Table: habitacion                                            */
+/* Table: habitacions                                           */
 /*==============================================================*/
-create table habitacion
+create table habitacions
 (
-   idHabitacion         int not null,
+   idHabitacion         int not null auto_increment,
    idSala               int,
    codVisibleHabitacion varchar(5),
    tipoHabitacion       varchar(20),
@@ -127,8 +127,8 @@ create table habitacion
 /*==============================================================*/
 create table historialUsuarios
 (
-   idHistorialUsuarios  int not null,
-   idUsuario            int not null,
+   idHistorialUsuarios  int not null auto_increment,
+   id                   int not null default 0,
    operacionUsuario     varchar(20) not null,
    detalleOperacion     text,
    horaOperacion        time,
@@ -141,7 +141,7 @@ create table historialUsuarios
 /*==============================================================*/
 create table observaciones
 (
-   idObservacion        int not null,
+   idObservacion        int not null auto_increment,
    idPersona            int not null,
    perIdpersona         int not null,
    pacIdpersona         int not null,
@@ -154,7 +154,7 @@ create table observaciones
 /*==============================================================*/
 create table pacienteEstados
 (
-   idEstadoPaciente     int not null,
+   idEstadoPaciente     int not null auto_increment,
    estadoPaciente       varchar(40),
    primary key (idEstadoPaciente)
 );
@@ -164,7 +164,7 @@ create table pacienteEstados
 /*==============================================================*/
 create table pacienteTipos
 (
-   idTipoPaciente       int not null,
+   idTipoPaciente       int not null auto_increment,
    tipoPaciente         varchar(20),
    primary key (idTipoPaciente)
 );
@@ -186,7 +186,7 @@ create table pacientes
 /*==============================================================*/
 create table personalRubroTipos
 (
-   idTipoPersonalRubro  int not null,
+   idTipoPersonalRubro  int not null auto_increment,
    tipoPersonalRubro    varchar(20),
    primary key (idTipoPersonalRubro)
 );
@@ -207,7 +207,7 @@ create table personalRubros
 /*==============================================================*/
 create table personas
 (
-   idPersona            int not null,
+   idPersona            int not null auto_increment,
    domicilioPersona     varchar(40),
    nombresPersona       varchar(40),
    apellidosPersona     varchar(40),
@@ -217,15 +217,25 @@ create table personas
 );
 
 /*==============================================================*/
-/* Table: reserva                                               */
+/* Table: reservaTipos                                          */
 /*==============================================================*/
-create table reserva
+create table reservaTipos
 (
-   idReserva            int not null,
+   idTipoReserva        int not null auto_increment,
+   tipoReserva          varchar(20) not null,
+   primary key (idTipoReserva)
+);
+
+/*==============================================================*/
+/* Table: reservas                                              */
+/*==============================================================*/
+create table reservas
+(
+   idReserva            int not null auto_increment,
    idTipoReserva        int not null,
    idPersona            int,
    idAsignacion         int,
-   idUsuario            int not null,
+   id                   int not null default 0,
    idSala               int,
    idArea               int,
    idCama               int,
@@ -239,21 +249,11 @@ create table reserva
 );
 
 /*==============================================================*/
-/* Table: reservaTipos                                          */
-/*==============================================================*/
-create table reservaTipos
-(
-   idTipoReserva        int not null,
-   tipoReserva          varchar(20) not null,
-   primary key (idTipoReserva)
-);
-
-/*==============================================================*/
 /* Table: salas                                                 */
 /*==============================================================*/
 create table salas
 (
-   idSala               int not null,
+   idSala               int not null auto_increment,
    idArea               int,
    codVisibleSala       varchar(5),
    tipoSala             varchar(20),
@@ -266,15 +266,23 @@ create table salas
 /*==============================================================*/
 create table usuarios
 (
-   idUsuario            int not null,
-   idPersona            int,
-   nombreUsuario        varchar(20),
-   passUsuario          varchar(20),
-   estadoUsuario        smallint not null,
-   nivelAutorizacion    smallint not null,
-   emailUsuario         varchar(40) not null,
-   codAccion            varchar(10),
-   primary key (idUsuario)
+   id                          int not null auto_increment,
+   idPersona                   int,
+   nombreUsuario               varchar(20),
+   encrypted_password          varchar(255),
+   estadoUsuario               smallint not null default 1,
+   nivelAutorizacion           smallint not null default 0,
+   email                       varchar(255) not null,
+   codAccion                   varchar(10),   
+   reset_password_token        varchar(255),
+   reset_password_sent_at      datetime,
+   remember_created_at         datetime,
+   sign_in_count               int not null default 0,
+   current_sign_in_at          datetime,
+   last_sign_in_at             datetime,
+   current_sign_in_ip          varchar(255),
+   last_sign_in_ip             varchar(255),
+   primary key (id)
 );
 
 alter table asignaciones add constraint FK_asignacionArea foreign key (idArea)
@@ -295,14 +303,14 @@ alter table asignaciones add constraint FK_seAsignaSala foreign key (idSala)
 alter table asignaciones add constraint FK_tipoAsignClasificaAsign foreign key (idTipoAsignacion)
       references asignacionTipos (idTipoAsignacion) on delete restrict on update restrict;
 
-alter table asignaciones add constraint FK_usuarioAsignaciones foreign key (idUsuario)
-      references usuarios (idUsuario) on delete restrict on update restrict;
+alter table asignaciones add constraint FK_usuarioAsignaciones foreign key (id)
+      references usuarios (id) on delete restrict on update restrict;
 
 alter table camas add constraint FK_areaPoseeCamas foreign key (idArea)
       references areas (idArea) on delete restrict on update restrict;
 
 alter table camas add constraint FK_habPoseeCamas foreign key (idHabitacion)
-      references habitacion (idHabitacion) on delete restrict on update restrict;
+      references habitacions (idHabitacion) on delete restrict on update restrict;
 
 alter table camas add constraint FK_salaPoseeCamas foreign key (idSala)
       references salas (idSala) on delete restrict on update restrict;
@@ -310,11 +318,11 @@ alter table camas add constraint FK_salaPoseeCamas foreign key (idSala)
 alter table desocupamientoRecintos add constraint FK_asignPoseeDeocupa foreign key (idAsignacion)
       references asignaciones (idAsignacion) on delete restrict on update restrict;
 
-alter table habitacion add constraint FK_salaContieneHabitaciones foreign key (idSala)
+alter table habitacions add constraint FK_salaContieneHabitaciones foreign key (idSala)
       references salas (idSala) on delete restrict on update restrict;
 
-alter table historialUsuarios add constraint FK_usuarioRegistraHistorial foreign key (idUsuario)
-      references usuarios (idUsuario) on delete restrict on update restrict;
+alter table historialUsuarios add constraint FK_usuarioRegistraHistorial foreign key (id)
+      references usuarios (id) on delete restrict on update restrict;
 
 alter table observaciones add constraint FK_pacPoseeObs foreign key (perIdpersona, idPersona)
       references pacientes (perIdpersona, idPersona) on delete restrict on update restrict;
@@ -340,29 +348,29 @@ alter table personalRubros add constraint FK_perRubEsPersona foreign key (idPers
 alter table personalRubros add constraint FK_perRubTipClasificaPerRub foreign key (idTipoPersonalRubro)
       references personalRubroTipos (idTipoPersonalRubro) on delete restrict on update restrict;
 
-alter table reserva add constraint FK_reservaCorrespondeArea foreign key (idArea)
+alter table reservas add constraint FK_reservaCorrespondeArea foreign key (idArea)
       references areas (idArea) on delete restrict on update restrict;
 
-alter table reserva add constraint FK_reservaParaPaciente foreign key (perIdpersona, pacIdpersona)
+alter table reservas add constraint FK_reservaParaPaciente foreign key (perIdpersona, pacIdpersona)
       references pacientes (perIdpersona, idPersona) on delete restrict on update restrict;
 
-alter table reserva add constraint FK_reservaParaPersonal foreign key (idPersona)
+alter table reservas add constraint FK_reservaParaPersonal foreign key (idPersona)
       references personalRubros (idPersona) on delete restrict on update restrict;
 
-alter table reserva add constraint FK_reservaRegistraAsignacion foreign key (idAsignacion)
+alter table reservas add constraint FK_reservaRegistraAsignacion foreign key (idAsignacion)
       references asignaciones (idAsignacion) on delete restrict on update restrict;
 
-alter table reserva add constraint FK_reservacionCama foreign key (idCama)
+alter table reservas add constraint FK_reservacionCama foreign key (idCama)
       references camas (idCama) on delete restrict on update restrict;
 
-alter table reserva add constraint FK_reservacionSala foreign key (idSala)
+alter table reservas add constraint FK_reservacionSala foreign key (idSala)
       references salas (idSala) on delete restrict on update restrict;
 
-alter table reserva add constraint FK_tipoReservaClasificaReserva foreign key (idTipoReserva)
+alter table reservas add constraint FK_tipoReservaClasificaReserva foreign key (idTipoReserva)
       references reservaTipos (idTipoReserva) on delete restrict on update restrict;
 
-alter table reserva add constraint FK_usuarioReserva foreign key (idUsuario)
-      references usuarios (idUsuario) on delete restrict on update restrict;
+alter table reservas add constraint FK_usuarioReserva foreign key (id)
+      references usuarios (id) on delete restrict on update restrict;
 
 alter table salas add constraint FK_areaPoseeSalas foreign key (idArea)
       references areas (idArea) on delete restrict on update restrict;
@@ -370,40 +378,14 @@ alter table salas add constraint FK_areaPoseeSalas foreign key (idArea)
 alter table usuarios add constraint FK_perRubroEsUsuario foreign key (idPersona)
       references personalRubros (idPersona) on delete restrict on update restrict;
 
-/* Correcciones*/
-RENAME TABLE habitacion TO habitacions;
-RENAME TABLE reserva TO reservas;
+/* Correcciones Complejas*/
 RENAME TABLE pacienteTipos TO paciente_tipos;
 RENAME TABLE pacienteEstados TO paciente_estados;
+RENAME TABLE asignacionTipos TO asignacion_tipos;
+RENAME TABLE desocupamientoRecintos TO desocupamiento_recintos;
+RENAME TABLE historialUsuarios TO historial_usuarios;
+RENAME TABLE personalRubroTipos TO personal_rubro_tipos;
+RENAME TABLE personalRubros TO personal_rubros;
+RENAME TABLE reservaTipos TO reserva_tipos;
 
-
-ALTER TABLE personas ADD created_at datetime;
-ALTER TABLE personas ADD updated_at datetime;
-
-/* Conflictos con "usuarios", ya que en la db está la tabla del modelo y no la de devise. Por lo tanto, hay que modificar el modelo.
-
-      t.string :email,              :null => false, :default => ""
-      t.string :encrypted_password, :null => false, :default => ""
-
-      ## Recoverable
-      t.string   :reset_password_token
-      t.datetime :reset_password_sent_at
-
-      ## Rememberable
-      t.datetime :remember_created_at
-
-      ## Trackable
-      t.integer  :sign_in_count, :default => 0, :null => false
-      t.datetime :current_sign_in_at
-      t.datetime :last_sign_in_at
-      t.string   :current_sign_in_ip
-      t.string   :last_sign_in_ip
-
-      ## exedente db
-      t.string   :nombreUsuario
-      t.integer  :nivelAutorizacion, :null => false, :default => 0
-      t.integer  :idPersona, :default => 0, :null => false
-      t.string   :codAccion, :default => "usuario"
-      t.integer  :estadoUsuario, :default => 
-*/
 

@@ -92,7 +92,7 @@ Dado que se está trabajando desde la base de datos a la aplicación, es necesar
 ¡OJO!
 CONCIDERACIONES APLICACIÓN
 
-Si se realizan scaffoldings, tener en cuenta que el campo "created_at" y "updated_at" que el scaffold crea por defecto para cada modelo, no están considerados en la db. Por lo tanto es necesario borrar los detalles en las vistas que consideran estos cambios para evitar errores. Yo solo he encontrado dificultad en una vista, en la carpeta "~/app/views/[nombre_scaffold+'s']/index.html.erb" borrar las 2 lineas en donde dice "created_at".
+Si se realizan scaffoldings, tener en cuenta que el campo "created_at" y "updated_at" que el scaffold crea por defecto para cada modelo, no están considerados en la db. Por lo tanto es necesario borrar los detalles en las vistas que consideran estos cambios para evitar errores. Yo solo he encontrado dificultad en una vista, en la carpeta "~/app/views/[nombre_scaffold+'s']/index.html.erb" borrar las lineas en donde dice "created_at".
 
 =========
 

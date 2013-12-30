@@ -53,7 +53,7 @@
                 <th><%= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>
                 <th><%= model_class.human_attribute_name(:rutPersona) %></th>
                 <th><%= model_class.human_attribute_name(:domicilioPersona) %></th>
-                <th><%= model_class.human_attribute_name(:created_at) %></th>
+                <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
                 <th><%=t '.actions', :default => t("helpers.actions") %></th>
               </tr>
             </thead>
@@ -66,7 +66,7 @@
                   <td><%= persona.fechaNacimientoPersona %></td>
                   <td><%= persona.rutPersona %></td>
                   <td><%= persona.domicilioPersona %></td>
-                  <td><%= persona.created_at %></td>
+                  <!--<td><%#= persona.created_at %></td>-->
                   <td>
                     <%= link_to t('.edit', :default => t("helpers.links.edit")),
                                 edit_persona_path(persona), :class => 'btn btn-mini' %>
