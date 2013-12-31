@@ -1,24 +1,27 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Paciente -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
 
-<p>
-  <strong>Peridpersona:</strong>
-  <%= @paciente.perIdPersona %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:perIdpersona) %>:</strong></dt>
+  <dd><%= @paciente.perIdpersona %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idPersona) %>:</strong></dt>
+  <dd><%= @paciente.idPersona %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idTipoPaciente) %>:</strong></dt>
+  <dd><%= @paciente.idTipoPaciente %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idEstadoPaciente) %>:</strong></dt>
+  <dd><%= @paciente.idEstadoPaciente %></dd>
+</dl>
 
-<p>
-  <strong>Idpersona:</strong>
-  <%= @paciente.idPersona %>
-</p>
-
-<p>
-  <strong>Idtipopaciente:</strong>
-  <%= @paciente.idTipoPaciente %>
-</p>
-
-<p>
-  <strong>Idestadopaciente:</strong>
-  <%= @paciente.idEstadoPaciente %>
-</p>
-
-<%= link_to 'Edit', edit_paciente_path(@paciente) %> |
-<%= link_to 'Back', pacientes_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              pacientes_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_paciente_path(@paciente), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              paciente_path(@paciente),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

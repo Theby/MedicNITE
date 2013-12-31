@@ -16,7 +16,13 @@
     </div>
     <div id="collapseOne" class="accordion-body collapse in">
       <div class="accordion-inner">
-        Por Implementar
+        <h4>Paso 1: Ingresar Persona </h4>
+        <%= link_to t('.new', :default => t("helpers.links.new")),
+                      new_persona_path, :class => 'btn btn-primary' %>
+        <h4>Paso 2: Registrar Paciente </h4> 
+        <%= link_to t('.new', :default => t("helpers.links.new")),
+            new_paciente_path,
+            :class => 'btn btn-primary' %>       
       </div>
     </div>
   </div>

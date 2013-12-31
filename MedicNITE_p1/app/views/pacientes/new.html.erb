@@ -1,5 +1,70 @@
-<h1>New paciente</h1>
+<br></br>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ol class="breadcrumb">
+    <li><a href="/"><h4>Panel de control</h4></a></li>
+    <li><h4>/</h4></li>
+    <li><a href="/personas"><h4>Administrar Personas</h4></a></li> 
+    <li class="active"><h4>/ Registrar Paciente</h4></li>
+  </div>
+  <div class="panel-body">
 
-<%= render 'form' %>
+  	<%= form_tag "/pacientes/new", :class => 'form-search', :method => 'get' do %>
+	  <p>
+	    <%= text_field_tag :search, params[:search],  :class => 'input-medium search-query' %>
+	    <%= submit_tag "Buscar Persona", :name => nil, :class => 'btn' %>
+	  </p>
+	<% end %>
 
-<%= link_to 'Back', pacientes_path %>
+  	<%- model_class = Persona -%>
+          <div class="page-header">
+            <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+          </div>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th><%= model_class.human_attribute_name(:id) %></th>
+                <th><%= model_class.human_attribute_name(:nombresPersona) %></th>
+                <th><%= model_class.human_attribute_name(:apellidosPersona) %></th>
+                <th><%= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>
+                <th><%= model_class.human_attribute_name(:rutPersona) %></th>
+                <th><%= model_class.human_attribute_name(:domicilioPersona) %></th>
+                <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
+                <th><%=t '.actions', :default => t("helpers.actions") %></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @personas.each do |persona| %>
+                <tr>
+                  <td><%= link_to persona.id, persona_path(persona) %></td>
+                  <td><%= persona.nombresPersona %></td>
+                  <td><%= persona.apellidosPersona %></td>
+                  <td><%= persona.fechaNacimientoPersona %></td>
+                  <td><%= persona.rutPersona %></td>
+                  <td><%= persona.domicilioPersona %></td>
+                  <!--<td><%#= persona.created_at %></td>-->
+                  <td>
+                    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                                edit_persona_path(persona), :class => 'btn btn-mini' %>
+                    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                                persona_path(persona),
+                                :method => :delete,
+                                :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                                :class => 'btn btn-mini btn-danger' %>
+                  </td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <%= will_paginate @personas, renderer: BootstrapPagination::Rails %>
+
+
+	<%- model_class = Paciente -%>
+	<div class="page-header">
+	  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+	</div>
+
+	<%= render :partial => 'form' %>
+
+  </div>
+</div>

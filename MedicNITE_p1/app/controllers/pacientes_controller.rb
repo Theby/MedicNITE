@@ -5,6 +5,7 @@ class PacientesController < ApplicationController
   # GET /pacientes.json
   def index
     @pacientes = Paciente.all
+    
   end
 
   # GET /pacientes/1
@@ -15,6 +16,13 @@ class PacientesController < ApplicationController
   # GET /pacientes/new
   def new
     @paciente = Paciente.new
+    # Personas + búsqueda + paginación
+    @personas = Persona.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+    #@paciente_estados = PacienteEstado.all
+    #@paciente_tipos = PacienteTipo.all
+    #@paciente_tipo = @paciente.paciente_tipos.create(paciente_tipo_params)
+    #@personas = Persona.all
+    #@persona_paciente = @pacientes.personas.build
   end
 
   # GET /pacientes/1/edit
