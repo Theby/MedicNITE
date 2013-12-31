@@ -12,5 +12,8 @@ rails g scaffold pacienteTipo idTipoPaciente:integer tipoPaciente:string{20} --n
 
 rails g scaffold pacienteEstado idEstadoPaciente:integer estadoPaciente:string{40} --no-migration
 
+rails g bootstrap:themed paciente_tipos
+
+rails g bootstrap:themed paciente_
 
 
