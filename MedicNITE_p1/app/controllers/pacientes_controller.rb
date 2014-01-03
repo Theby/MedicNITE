@@ -1,10 +1,20 @@
 class PacientesController < ApplicationController
   before_action :set_paciente, only: [:show, :edit, :update, :destroy]
-
+    
+    
   # GET /pacientes
   # GET /pacientes.json
   def index
+    @paciente = Paciente.new
+
     @pacientes = Paciente.all
+    @paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
+    
+    @paciente_estado = PacienteEstado.new
+    @paciente_tipo = PacienteTipo.new
+    @paciente_estados = PacienteEstado.all
+    @paciente_tipos = PacienteTipo.all
+    
     
   end
 
@@ -17,8 +27,11 @@ class PacientesController < ApplicationController
   def new
     @paciente = Paciente.new
 
+    @paciente_estado = PacienteEstado.new
+    @paciente_tipo = PacienteTipo.new
+
     # Personas + búsqueda + paginación
-    @personas = Persona.search(params[:search]).paginate(:page => params[:page], :per_page => 5)
+    @paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
     
     @paciente_estados = PacienteEstado.all
     @paciente_tipos = PacienteTipo.all

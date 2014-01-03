@@ -1,4 +1,4 @@
-<br></br>
+
 <div class="panel panel-default">
   <div class="panel-heading">
     <ol class="breadcrumb">
@@ -7,68 +7,32 @@
     <li><a href="/personas"><h4>Administrar Personas</h4></a></li> 
     <li class="active"><h4>/ Registrar Paciente</h4></li>
   </div>
-  <div class="panel-body">
-        
+  <div class="panel-body">    
+    
         <!-- TIPO PACIENTE -->
 
-        <div class="panel panel-default">
-          <div class="panel-body">
-
+            <%= form_tag "/pacientes/new", :class => 'form-search', :method => 'get', :id => "paciente_personas_search" do %>
+                <p>
+                  <%= text_field_tag :searchpaciente, params[:searchpaciente],  :class => 'input-medium search-query' %>
+                  <%= submit_tag "Buscar Persona", :name => nil, :class => 'btn' %>
+                </p>
+              <% end %>  
+      
+            <h4>Seleccionar tipo de paciente</h4>
+            <%- model_class = Paciente -%>
+            <%= form_for @paciente, :html => { :class => 'form-horizontal' } do |f| %>
             <%- model_class = PacienteTipo -%>
-            <h3>Seleccionar tipo de paciente</h3>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Seleccionar</th>
-                  <th><%= model_class.human_attribute_name(:id) %></th>
-                  <th><%= model_class.human_attribute_name(:idTipoPaciente) %></th>
-                  <th><%= model_class.human_attribute_name(:tipoPaciente) %></th>
-                  <!-- <th><%#= model_class.human_attribute_name(:created_at) %></th> -->
-                  <th><%=t '.actions', :default => t("helpers.actions") %></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% @paciente_tipos.each do |paciente_tipo| %>
-                  <tr>
-                    <td>
-                      <span class="input-group-addon">
-                        <%= radio_button_tag 'paciente_tipo', paciente_tipo, @paciente_tipo == paciente_tipo %>
-                      </span>
-                    </td>
-                    <td><%= link_to paciente_tipo.id, paciente_tipo_path(paciente_tipo) %></td>
-                    <td><%= paciente_tipo.idTipoPaciente %></td>
-                    <td><%= paciente_tipo.tipoPaciente %></td>
-                    <!-- <td><%#=l paciente_tipo.created_at %></td> -->
-                    <td>
-                      <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                                  edit_paciente_tipo_path(paciente_tipo), :class => 'btn btn-mini' %>
-                      <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                                  paciente_tipo_path(paciente_tipo),
-                                  :method => :delete,
-                                  :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                                  :class => 'btn btn-mini btn-danger' %>
-                    </td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
+            
+            <%= f.select :idTipoPaciente,options_from_collection_for_select(@paciente_tipos, 'idTipoPaciente', 'tipoPaciente') %>
+       
+        <!-- SELECCIONAR PERSONA PARA PACIENTE -->
 
-          </div> <!-- Panel Body -->
-        </div> <!-- Panel Selección tipo paciente -->
-
-        <!-- SELECCIONAR PERSONA -->
-
-        <div class="panel panel-default">
-          <div class="panel-body">
-
-      	      <%- model_class = Persona -%>
-              <h3>Seleccionar persona para registro de Paciente</h3>
-              <%= form_tag "/pacientes/new", :class => 'form-search', :method => 'get' do %>
-        			  <p>
-        			    <%= text_field_tag :search, params[:search],  :class => 'input-medium search-query' %>
-        			    <%= submit_tag "Buscar Persona", :name => nil, :class => 'btn' %>
-        			  </p>
-        		  <% end %>
+              <%- model_class = Persona -%>
+              <h4>Seleccionar persona para registro de Paciente</h4>
+               
+            <!--Intento con AJAX: <div id="paciente_personas"><%#= render 'paciente_personas' %></div> -->
+              
+              <%- model_class = Persona -%>
               <table class="table table-striped">
                 <thead>
                   <tr>
@@ -84,25 +48,25 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <% @personas.each do |persona| %>
+                  <% @paciente_personas.each do |paciente_persona| %>
                     <tr>
                       <td>
                         <span class="input-group-addon">
-                          <%= radio_button_tag 'persona', persona, @persona == persona %>
+                          <%= f.radio_button :idPersona, paciente_persona.id %>
                         </span>
                       </td>
-                      <td><%= link_to persona.id, persona_path(persona) %></td>
-                      <td><%= persona.nombresPersona %></td>
-                      <td><%= persona.apellidosPersona %></td>
-                      <td><%= persona.fechaNacimientoPersona %></td>
-                      <td><%= persona.rutPersona %></td>
-                      <td><%= persona.domicilioPersona %></td>
+                      <td><%= link_to paciente_persona.id, persona_path(paciente_persona) %></td>
+                      <td><%= paciente_persona.nombresPersona %></td>
+                      <td><%= paciente_persona.apellidosPersona %></td>
+                      <td><%= paciente_persona.fechaNacimientoPersona %></td>
+                      <td><%= paciente_persona.rutPersona %></td>
+                      <td><%= paciente_persona.domicilioPersona %></td>
                       <!--<td><%#= persona.created_at %></td>-->
                       <td>
                         <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                                    edit_persona_path(persona), :class => 'btn btn-mini' %>
+                                    edit_persona_path(paciente_persona), :class => 'btn btn-mini' %>
                         <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                                    persona_path(persona),
+                                    persona_path(paciente_persona),
                                     :method => :delete,
                                     :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Estás seguro?')) },
                                     :class => 'btn btn-mini btn-danger' %>
@@ -111,123 +75,40 @@
                   <% end %>
                 </tbody>
               </table>
-              <%= will_paginate @personas, renderer: BootstrapPagination::Rails %>
+              <%= will_paginate @paciente_personas, renderer: BootstrapPagination::Rails %>
+              
+              <div class="control-group">
+                <h4>Indique el Id de la persona deudora</h4>
+                <div class="controls">
+                  <%= f.text_field :perIdpersona, :class => 'text_field' %>
+                </div>
+              </div>
 
-          </div> <!-- Panel Body -->
-        </div> <!-- Panel Selección persona -->
 
         <!-- SELECCIONAR ESTADO DEL PACIENTE -->
 
-        <div class="panel panel-default">
-          <div class="panel-body">
+            <h4>Seleccionar estado del paciente</h4>
+
             <%- model_class = PacienteEstado -%>
-            <h3>Seleccionar estado del paciente</h3>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Seleccionar</th>
-                  <th><%= model_class.human_attribute_name(:id) %></th>
-                  <th><%= model_class.human_attribute_name(:idEstadoPaciente) %></th>
-                  <th><%= model_class.human_attribute_name(:estadoPaciente) %></th>
-                  <!-- <th><%#= model_class.human_attribute_name(:created_at) %></th> -->
-                  <th><%=t '.actions', :default => t("helpers.actions") %></th>
-                </tr>
-              </thead>
-              <tbody>
-                <% @paciente_estados.each do |paciente_estado| %>
-                  <tr>
-                    <td>
-                        <span class="input-group-addon">
-                          <%= radio_button_tag 'paciente_estado', paciente_estado, @paciente_estado == paciente_estado %>
-                        </span>
-                      </td>
-                    <td><%= link_to paciente_estado.id, paciente_estado_path(paciente_estado) %></td>
-                    <td><%= paciente_estado.idEstadoPaciente %></td>
-                    <td><%= paciente_estado.estadoPaciente %></td>
-                    <!--<td><%#= paciente_estado.created_at %></td> -->
-                    <td>
-                      <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                                  edit_paciente_estado_path(paciente_estado), :class => 'btn btn-mini' %>
-                      <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                                  paciente_estado_path(paciente_estado),
-                                  :method => :delete,
-                                  :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                                  :class => 'btn btn-mini btn-danger' %>
-                    </td>
-                  </tr>
-                <% end %>
-              </tbody>
-            </table>
+            <%= f.select :idEstadoPaciente ,options_from_collection_for_select(@paciente_estados, 'idEstadoPaciente', 'estadoPaciente') %>
 
-          </div> <!-- Panel Body -->
-        </div> <!-- Panel Selección estado paciente -->
-
-        <!-- SELECCIONAR DEUDOR -->
-
-        <div class="panel panel-default">
-          <div class="panel-body">
-
-              <%- model_class = Persona -%>
-              <h3>Seleccionar persona para establecer deudor del Paciente</h3>
-              <%= form_tag "/pacientes/new", :class => 'form-search', :method => 'get' do %>
-                <p>
-                  <%= text_field_tag :search, params[:search],  :class => 'input-medium search-query' %>
-                  <%= submit_tag "Buscar Persona", :name => nil, :class => 'btn' %>
-                </p>
-              <% end %>
-              <table class="table table-striped">
-                <thead>
-                  <tr>
-                    <th>Seleccionar</th>
-                    <th><%= model_class.human_attribute_name(:id) %></th>
-                    <th><%= model_class.human_attribute_name(:nombresPersona) %></th>
-                    <th><%= model_class.human_attribute_name(:apellidosPersona) %></th>
-                    <th><%= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>
-                    <th><%= model_class.human_attribute_name(:rutPersona) %></th>
-                    <th><%= model_class.human_attribute_name(:domicilioPersona) %></th>
-                    <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
-                    <th><%=t '.actions', :default => t("helpers.actions") %></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <% @personas.each do |persona| %>
-                    <tr>
-                      <td>
-                        <span class="input-group-addon">
-                          <%= radio_button_tag 'deudor', persona, @deudor == persona %>
-                        </span>
-                      </td>
-                      <td><%= link_to persona.id, persona_path(persona) %></td>
-                      <td><%= persona.nombresPersona %></td>
-                      <td><%= persona.apellidosPersona %></td>
-                      <td><%= persona.fechaNacimientoPersona %></td>
-                      <td><%= persona.rutPersona %></td>
-                      <td><%= persona.domicilioPersona %></td>
-                      <!--<td><%#= persona.created_at %></td>-->
-                      <td>
-                        <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                                    edit_persona_path(persona), :class => 'btn btn-mini' %>
-                        <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                                    persona_path(persona),
-                                    :method => :delete,
-                                    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Estás seguro?')) },
-                                    :class => 'btn btn-mini btn-danger' %>
-                      </td>
-                    </tr>
-                  <% end %>
-                </tbody>
-              </table>
-              <%= will_paginate @personas, renderer: BootstrapPagination::Rails %>
-
-          </div> <!-- Panel Body -->
-        </div> <!-- Panel Selección deudor paciente -->
-
-	<%- model_class = Paciente -%>
-	<div class="page-header">
-	  <h1><%=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
-	</div>
-
-	<%= render :partial => 'form' %>
-
+        <div class="form-actions">
+          <%= f.submit nil, :class => 'btn btn-primary' %>
+          <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                      personas_path, :class => 'btn' %>
+        </div>
+      <% end %>
+      
   </div>
 </div>
+  
+
+
+<!--
+<%#- model_class = Paciente -%>
+    <div class="page-header">
+      <h1>Registrando pacientes</h1>
+    </div>
+
+    <%#= render :partial => 'form' %>
+    -->

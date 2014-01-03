@@ -16,3 +16,15 @@
 //= require turbolinks
 //= require_tree .
 
+
+//Intento de agregar AJAX a un formulario
+$(function() {
+  $("#paciente_personas th a, #paciente_personas .pagination a").live("click", function() {
+    $.getScript(this.href);
+    return false;
+  });
+  $("#paciente_personas_search input").keyup(function() {
+    $.get($("#paciente_personas_search").attr("action"), $("#paciente_personas_search").serialize(), null, "script");
+    return false;
+  });
+});
