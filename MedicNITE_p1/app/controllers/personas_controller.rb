@@ -4,7 +4,7 @@ class PersonasController < ApplicationController
   # GET /personas
   # GET /personas.json
   def index
-    @personas = Persona.all
+    @personas = Persona.search(params[:searchpersona]).paginate(:page => params[:page], :per_page => 5)
     
   end
 
@@ -25,7 +25,7 @@ class PersonasController < ApplicationController
   # POST /personas
   # POST /personas.json
   def create
-    
+
     @persona = Persona.new(persona_params)
 
     respond_to do |format|
