@@ -40,3 +40,7 @@ rails g scaffold habitacion idHabitacion:integer idSala:integer codVisibleHabita
 
 rails g bootstrap:themed habitacions
 
+rails g scaffold sala idSala:integer idArea:integer codVisibleSala:string{5} tipoSala:string{20} estadoSalas:string{10} --no-migration
+
+rails g bootstrap:themed salas
+

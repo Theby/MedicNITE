@@ -20,7 +20,7 @@
           <th><%= model_class.human_attribute_name(:tipoHabitacion) %></th>
           <th><%= model_class.human_attribute_name(:capacidadHabitacion) %></th>
           <th><%= model_class.human_attribute_name(:estadoHabitacion) %></th>
-          <th><%= model_class.human_attribute_name(:created_at) %></th>
+          <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
           <th><%=t '.actions', :default => t("helpers.actions") %></th>
         </tr>
       </thead>
@@ -34,7 +34,7 @@
             <td><%= habitacion.tipoHabitacion %></td>
             <td><%= habitacion.capacidadHabitacion %></td>
             <td><%= habitacion.estadoHabitacion %></td>
-            <td><%=l habitacion.created_at %></td>
+            <!--<td><%#=l habitacion.created_at %></td> -->
             <td>
               <%= link_to t('.edit', :default => t("helpers.links.edit")),
                           edit_habitacion_path(habitacion), :class => 'btn btn-mini' %>
