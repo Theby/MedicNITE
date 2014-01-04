@@ -1,4 +1,3 @@
-<br></br>
 <div class="panel panel-default">
   <div class="panel-heading">
     <ol class="breadcrumb">
@@ -11,7 +10,7 @@
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        Ingresar Paciente
+        <h4><b>Administrar Pacientes</b></h4>
       </a>
     </div>
     <div id="collapseOne" class="accordion-body collapse in">
@@ -23,13 +22,17 @@
         <%= link_to t('.new', :default => t("helpers.links.new")),
             new_paciente_path,
             :class => 'btn btn-primary' %>   
+        <h4>Paso 3: Listar Paciente</h4>
+        <%= link_to t('.Listar', :default => t("helpers.links.listar")),
+            pacientes_path,
+            :class => 'btn btn-primary' %>
       </div>
     </div>
   </div>
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-        Ingresar Personal del Médico
+        <h4><b>Administrar Personal Médico</b></h4>
       </a>
     </div>
     <div id="collapseTwo" class="accordion-body collapse">
@@ -41,7 +44,7 @@
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-        Listar Personas
+        <h4><b>Listar Personas</b></h4>
       </a>
     </div>
     <div id="collapseThree" class="accordion-body collapse">

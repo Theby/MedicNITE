@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     30-12-13 01:55:32                            */
+/* Created on:     03-01-14 19:08:51                            */
 /*==============================================================*/
 
 
@@ -66,8 +66,8 @@ create table asignacionTipos
 create table asignaciones
 (
    idAsignacion         int not null auto_increment,
-   perIdpersona         int,
-   pacIdpersona         int,
+   perIdPersona         int,
+   pacIdPersona         int,
    idPersona            int,
    id                   int not null default 0,
    idSala               int,
@@ -143,8 +143,8 @@ create table observaciones
 (
    idObservacion        int not null auto_increment,
    idPersona            int not null,
-   perIdpersona         int not null,
-   pacIdpersona         int not null,
+   perIdPersona         int not null,
+   pacIdPersona         int not null,
    detalleObservacion   text not null,
    primary key (idObservacion)
 );
@@ -174,11 +174,11 @@ create table pacienteTipos
 /*==============================================================*/
 create table pacientes
 (
-   perIdpersona         int not null,
+   perIdPersona         int not null,
    idPersona            int not null,
    idTipoPaciente       int not null,
    idEstadoPaciente     int not null,
-   primary key (perIdpersona, idPersona)
+   primary key (perIdPersona, idPersona)
 );
 
 /*==============================================================*/
@@ -239,8 +239,8 @@ create table reservas
    idSala               int,
    idArea               int,
    idCama               int,
-   perIdpersona         int,
-   pacIdpersona         int,
+   perIdPersona         int,
+   pacIdPersona         int,
    iniFechaReserva      date not null,
    iniHoraReserva       time not null,
    finFechaReserva      date,
@@ -266,7 +266,7 @@ create table salas
 /*==============================================================*/
 create table usuarios
 (
-   id                          int not null auto_increment,
+   id                   int not null auto_increment,
    idPersona                   int,
    nombreUsuario               varchar(20),
    encrypted_password          varchar(255),
@@ -288,10 +288,10 @@ create table usuarios
 alter table asignaciones add constraint FK_asignacionArea foreign key (idArea)
       references areas (idArea) on delete restrict on update restrict;
 
-alter table asignaciones add constraint FK_pacEsAsignado foreign key (perIdpersona, pacIdpersona)
-      references pacientes (perIdpersona, idPersona) on delete restrict on update restrict;
+alter table asignaciones add constraint FK_pacEsAsignado foreign key (perIdPersona, pacIdPersona)
+      references pacientes (perIdPersona, idPersona) on delete restrict on update restrict;
 
-alter table asignaciones add constraint FK_personalEsAsignado foreign key (perIdpersona)
+alter table asignaciones add constraint FK_personalEsAsignado foreign key (perIdPersona)
       references personalRubros (idPersona) on delete restrict on update restrict;
 
 alter table asignaciones add constraint FK_seAsignaCama foreign key (idCama)
@@ -324,8 +324,8 @@ alter table habitacions add constraint FK_salaContieneHabitaciones foreign key (
 alter table historialUsuarios add constraint FK_usuarioRegistraHistorial foreign key (id)
       references usuarios (id) on delete restrict on update restrict;
 
-alter table observaciones add constraint FK_pacPoseeObs foreign key (perIdpersona, idPersona)
-      references pacientes (perIdpersona, idPersona) on delete restrict on update restrict;
+alter table observaciones add constraint FK_pacPoseeObs foreign key (perIdPersona, idPersona)
+      references pacientes (perIdPersona, idPersona) on delete restrict on update restrict;
 
 alter table observaciones add constraint FK_perRubRealizaObservaciones foreign key (idObservacion)
       references personalRubros (idPersona) on delete restrict on update restrict;
@@ -333,7 +333,7 @@ alter table observaciones add constraint FK_perRubRealizaObservaciones foreign k
 alter table pacientes add constraint FK_deudorEsPersona foreign key (idPersona)
       references personas (idPersona) on delete restrict on update restrict;
 
-alter table pacientes add constraint FK_pacEsPersona foreign key (perIdpersona)
+alter table pacientes add constraint FK_pacEsPersona foreign key (perIdPersona)
       references personas (idPersona) on delete restrict on update restrict;
 
 alter table pacientes add constraint FK_pacPresentaEstPac foreign key (idEstadoPaciente)
@@ -351,8 +351,8 @@ alter table personalRubros add constraint FK_perRubTipClasificaPerRub foreign ke
 alter table reservas add constraint FK_reservaCorrespondeArea foreign key (idArea)
       references areas (idArea) on delete restrict on update restrict;
 
-alter table reservas add constraint FK_reservaParaPaciente foreign key (perIdpersona, pacIdpersona)
-      references pacientes (perIdpersona, idPersona) on delete restrict on update restrict;
+alter table reservas add constraint FK_reservaParaPaciente foreign key (perIdPersona, pacIdPersona)
+      references pacientes (perIdPersona, idPersona) on delete restrict on update restrict;
 
 alter table reservas add constraint FK_reservaParaPersonal foreign key (idPersona)
       references personalRubros (idPersona) on delete restrict on update restrict;
@@ -387,5 +387,4 @@ RENAME TABLE historialUsuarios TO historial_usuarios;
 RENAME TABLE personalRubroTipos TO personal_rubro_tipos;
 RENAME TABLE personalRubros TO personal_rubros;
 RENAME TABLE reservaTipos TO reserva_tipos;
-
 

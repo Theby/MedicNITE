@@ -13,10 +13,10 @@
 
             <%= form_tag "/pacientes/new", :class => 'form-search', :method => 'get', :id => "paciente_personas_search" do %>
                 <p>
-                  <%= text_field_tag :searchpaciente, params[:searchpaciente],  :class => 'input-medium search-query' %>
+                  <%= text_field_tag :searchpersona, params[:searchpersona],  :class => 'input-medium search-query' %>
                   <%= submit_tag "Buscar Persona", :name => nil, :class => 'btn' %>
                 </p>
-              <% end %>  
+            <% end %>  
       
             <h4>Seleccionar tipo de paciente</h4>
             <%- model_class = Paciente -%>
@@ -80,7 +80,7 @@
               <div class="control-group">
                 <h4>Indique el Id de la persona deudora</h4>
                 <div class="controls">
-                  <%= f.text_field :perIdpersona, :class => 'text_field' %>
+                  <%= f.number_field :perIdPersona, :class => 'number_field', :min =>"1" %>
                 </div>
               </div>
 

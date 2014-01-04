@@ -6,15 +6,32 @@ class PacientesController < ApplicationController
   # GET /pacientes.json
   def index
     @paciente = Paciente.new
-
     @pacientes = Paciente.all
-    @paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
+
+    @personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
+    #@paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
     
-    @paciente_estado = PacienteEstado.new
-    @paciente_tipo = PacienteTipo.new
+    #@paciente_estado = PacienteEstado.new
+    #@paciente_tipo = PacienteTipo.new
     @paciente_estados = PacienteEstado.all
     @paciente_tipos = PacienteTipo.all
+    @paciente_personas
     
+    def is_a_valid_nombre?(nombre)
+    nombre_regex = %r{
+      ^ # Start of string
+      [0-9a-z] # First character
+      [0-9a-z.+]+ # Middle characters
+      [0-9a-z] # Last character
+      @ # Separating @ character
+      [0-9a-z] # Domain name begin
+      [0-9a-z.-]+ # Domain name middle
+      [0-9a-z] # Domain name end
+      $ # End of string
+    }xi # Case insensitive
+
+    (nombre =~ nombre_regex)
+end
     
   end
 
@@ -31,7 +48,7 @@ class PacientesController < ApplicationController
     @paciente_tipo = PacienteTipo.new
 
     # Personas + búsqueda + paginación
-    @paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
+    @paciente_personas = Persona.search(params[:searchpersona]).paginate(:page => params[:page], :per_page => 5)
     
     @paciente_estados = PacienteEstado.all
     @paciente_tipos = PacienteTipo.all

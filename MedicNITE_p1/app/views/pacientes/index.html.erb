@@ -14,7 +14,7 @@
       <h3>Listando pacientes</h3>
     </div>
     <!-- Busqueda por implementar, ajustes -->
-    <%= form_tag "/pacientes", :class => 'form-search', :method => 'get', :id => "paciente_personas_search" do %>
+    <%= form_tag "/pacientes", :class => 'form-search', :method => 'get', :id => "paciente_search" do %>
       <p>
         <%= text_field_tag :searchpaciente, params[:searchpaciente],  :class => 'input-medium search-query' %>
         <%= submit_tag "Buscar Paciente", :name => nil, :class => 'btn' %>
@@ -25,7 +25,7 @@
       <thead>
         <tr>
           <th><%= model_class.human_attribute_name(:id) %></th>
-          <th><%= model_class.human_attribute_name(:perIdpersona) %></th>
+          <th><%= model_class.human_attribute_name(:perIdPersona) %></th>
           <th><%= model_class.human_attribute_name(:idPersona) %></th>
           <th><%= model_class.human_attribute_name(:idTipoPaciente) %></th>
           <th><%= model_class.human_attribute_name(:idEstadoPaciente) %></th>
@@ -37,11 +37,11 @@
         <% @pacientes.each do |paciente| %>
           <tr>
             <td><%= link_to paciente.id, paciente_path(paciente) %></td>
-            <td><%= paciente.perIdpersona %></td>
+            <td><%= paciente.perIdPersona %></td>
             <td><%= paciente.idPersona %></td>
             <td><%= paciente.idTipoPaciente %></td>
             <td><%= paciente.idEstadoPaciente %></td>
-            <td><%=l paciente.created_at %></td>
+            <!-- <td><%#= paciente.created_at %></td>  -->
             <td>
               <%= link_to t('.edit', :default => t("helpers.links.edit")),
                           edit_paciente_path(paciente), :class => 'btn btn-mini' %>
@@ -55,7 +55,7 @@
         <% end %>
       </tbody>
     </table>
-
+    <%= will_paginate @personas, renderer: BootstrapPagination::Rails %>
     <%= link_to t('.new', :default => t("helpers.links.new")),
                 new_paciente_path,
                 :class => 'btn btn-primary' %>
