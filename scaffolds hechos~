@@ -26,3 +26,9 @@ rails g scaffold personalRubroTipo idTipoPersonalRubro:integer tipoPersonalRubro
 
 rails g bootstrap:themed personalRubroTipos
 
+recintos:
+
+rails g controller recintos
+
+rails g bootstrap:themed recintos
+

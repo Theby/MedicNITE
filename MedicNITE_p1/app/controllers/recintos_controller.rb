@@ -1,0 +1,2 @@
+class RecintosController < ApplicationController
+end

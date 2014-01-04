@@ -8,7 +8,7 @@
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:idTipoPersonalRubro) %></th>
       <th><%= model_class.human_attribute_name(:tipoPersonalRubro) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <!--<th><%#= model_class.human_attribute_name(:created_at) %></th>-->
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -18,7 +18,7 @@
         <td><%= link_to personal_rubro_tipo.id, personal_rubro_tipo_path(personal_rubro_tipo) %></td>
         <td><%= personal_rubro_tipo.idTipoPersonalRubro %></td>
         <td><%= personal_rubro_tipo.tipoPersonalRubro %></td>
-        <td><%=l personal_rubro_tipo.created_at %></td>
+        <!--<td><%#=l personal_rubro_tipo.created_at %></td>-->
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_personal_rubro_tipo_path(personal_rubro_tipo), :class => 'btn btn-mini' %>
