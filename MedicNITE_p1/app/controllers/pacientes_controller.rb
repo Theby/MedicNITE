@@ -16,23 +16,7 @@ class PacientesController < ApplicationController
     @paciente_estados = PacienteEstado.all
     @paciente_tipos = PacienteTipo.all
     @paciente_personas
-    
-    def is_a_valid_nombre?(nombre)
-    nombre_regex = %r{
-      ^ # Start of string
-      [0-9a-z] # First character
-      [0-9a-z.+]+ # Middle characters
-      [0-9a-z] # Last character
-      @ # Separating @ character
-      [0-9a-z] # Domain name begin
-      [0-9a-z.-]+ # Domain name middle
-      [0-9a-z] # Domain name end
-      $ # End of string
-    }xi # Case insensitive
-
-    (nombre =~ nombre_regex)
-end
-    
+     
   end
 
   # GET /pacientes/1

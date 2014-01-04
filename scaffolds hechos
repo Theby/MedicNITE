@@ -16,4 +16,13 @@ rails g bootstrap:themed paciente_tipos
 
 rails g bootstrap:themed paciente_estados
 
+personal_rubros:
+
+rails g scaffold personalRubro idPersona:integer idTipoPersonalRubro:integer especialidadPersonalRubro:string{40}
+
+rails g bootstrap:themed personalRubros
+
+rails g scaffold personalRubroTipo idTipoPersonalRubro:integer tipoPersonalRubro:string{20}
+
+rails g bootstrap:themed personalRubroTipos
 

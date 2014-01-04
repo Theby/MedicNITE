@@ -1,4 +1,8 @@
 MedicNITEP1::Application.routes.draw do
+  resources :personal_rubro_tipos
+
+  resources :personal_rubros
+
   resources :paciente_estados
 
   resources :paciente_tipos

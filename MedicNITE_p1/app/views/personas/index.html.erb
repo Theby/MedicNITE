@@ -13,13 +13,13 @@
         <h4><b>Administrar Pacientes</b></h4>
       </a>
     </div>
-    <div id="collapseOne" class="accordion-body collapse in">
+    <div id="collapseOne" class="accordion-body collapse">
       <div class="accordion-inner">
         <h4>Paso 1: Ingresar Persona </h4>
-        <%= link_to t('.new', :default => t("helpers.links.new")),
+        <%= link_to t('.Ingresar', :default => t("helpers.links.ingresar")),
                       new_persona_path, :class => 'btn btn-primary' %>
         <h4>Paso 2: Registrar Paciente </h4>
-        <%= link_to t('.new', :default => t("helpers.links.new")),
+        <%= link_to t('.Registrar', :default => t("helpers.links.registrar")),
             new_paciente_path,
             :class => 'btn btn-primary' %>   
         <h4>Paso 3: Listar Paciente</h4>
@@ -37,7 +37,17 @@
     </div>
     <div id="collapseTwo" class="accordion-body collapse">
       <div class="accordion-inner">
-          Por Implementar
+        <h4>Paso 1: Ingresar Persona </h4>
+        <%= link_to t('.Ingresar', :default => t("helpers.links.ingresar")),
+                      new_persona_path, :class => 'btn btn-primary' %>
+        <h4>Paso 2: Registrar Personal Médico </h4>
+        <%= link_to t('.Registrar', :default => t("helpers.links.registrar")),
+            new_personal_rubro_path,
+            :class => 'btn btn-primary' %>   
+        <h4>Paso 3: Listar Personal Médico</h4>
+        <%= link_to t('.Listar', :default => t("helpers.links.listar")),
+            personal_rubros_path,
+            :class => 'btn btn-primary' %>
       </div>
     </div>
   </div>

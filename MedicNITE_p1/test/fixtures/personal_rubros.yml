@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idPersona: 1
+  idTipoPersonalRubro: 1
+  especialidadPersonalRubro: MyString
+
+two:
+  idPersona: 1
+  idTipoPersonalRubro: 1
+  especialidadPersonalRubro: MyString
