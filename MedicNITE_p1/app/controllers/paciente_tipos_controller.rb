@@ -1,4 +1,5 @@
 class PacienteTiposController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_paciente_tipo, only: [:show, :edit, :update, :destroy]
 
   # GET /paciente_tipos

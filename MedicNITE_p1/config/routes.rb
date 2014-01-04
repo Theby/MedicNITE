@@ -1,4 +1,6 @@
 MedicNITEP1::Application.routes.draw do
+  resources :camas
+
   resources :recintos
 
   resources :personal_rubro_tipos

@@ -1,4 +1,5 @@
 class PacientesController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_paciente, only: [:show, :edit, :update, :destroy]
     
     

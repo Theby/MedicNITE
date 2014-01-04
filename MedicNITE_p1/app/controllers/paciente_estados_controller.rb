@@ -1,4 +1,5 @@
 class PacienteEstadosController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_paciente_estado, only: [:show, :edit, :update, :destroy]
 
   # GET /paciente_estados

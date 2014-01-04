@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ol class="breadcrumb">
+    <li><a href="/"><h4>Panel de control</h4></a></li>
+    <li><h4>/</h4></li>
+    <li><a href="/recintos"><h4>Administrar Recintos</h4></a></li> 
+    <li class="active"><h4>/ Posicionar Camas</h4></li>
+  </div>
+  <div class="panel-body">   
+
+    <%- model_class = Cama -%>
+    <h3>Posicionando camas</h3>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= model_class.human_attribute_name(:id) %></th>
+          <th><%= model_class.human_attribute_name(:idCama) %></th>
+          <th><%= model_class.human_attribute_name(:idArea) %></th>
+          <th><%= model_class.human_attribute_name(:idHabitacion) %></th>
+          <th><%= model_class.human_attribute_name(:idSala) %></th>
+          <th><%= model_class.human_attribute_name(:codVisibleCama) %></th>
+          <th><%= model_class.human_attribute_name(:estadoCama) %></th>
+          <th><%= model_class.human_attribute_name(:tipoCama) %></th>
+          <!--<th><%#= model_class.human_attribute_name(:created_at) %></th>-->
+          <th><%=t '.actions', :default => t("helpers.actions") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @camas.each do |cama| %>
+          <tr>
+            <td><%= link_to cama.id, cama_path(cama) %></td>
+            <td><%= cama.idCama %></td>
+            <td><%= cama.idArea %></td>
+            <td><%= cama.idHabitacion %></td>
+            <td><%= cama.idSala %></td>
+            <td><%= cama.codVisibleCama %></td>
+            <td><%= cama.estadoCama %></td>
+            <td><%= cama.tipoCama %></td>
+            <!--<td><%#=l cama.created_at %></td>-->
+            <td>
+              <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                          edit_cama_path(cama), :class => 'btn btn-mini' %>
+              <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                          cama_path(cama),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-mini btn-danger' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <%= link_to t('.new', :default => t("helpers.links.new")),
+                new_cama_path,
+                :class => 'btn btn-primary' %>
+
+  </div>
+</div>

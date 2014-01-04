@@ -32,3 +32,7 @@ rails g controller recintos
 
 rails g bootstrap:themed recintos
 
+rails g scaffold cama idCama:integer idArea:integer idHabitacion:integer idSala:integer codVisibleCama:string{5} estadoCama:string{10} tipoCama:string{20} --no-migration
+
+rails g bootstrap:themed camas
+

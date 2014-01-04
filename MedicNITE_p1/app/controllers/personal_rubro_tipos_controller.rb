@@ -1,4 +1,5 @@
 class PersonalRubroTiposController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_personal_rubro_tipo, only: [:show, :edit, :update, :destroy]
 
   # GET /personal_rubro_tipos
