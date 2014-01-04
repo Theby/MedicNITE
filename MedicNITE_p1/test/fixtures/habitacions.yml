@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idHabitacion: 1
+  idSala: 1
+  codVisibleHabitacion: MyString
+  tipoHabitacion: MyString
+  capacidadHabitacion: 1
+  estadoHabitacion: MyString
+
+two:
+  idHabitacion: 1
+  idSala: 1
+  codVisibleHabitacion: MyString
+  tipoHabitacion: MyString
+  capacidadHabitacion: 1
+  estadoHabitacion: MyString

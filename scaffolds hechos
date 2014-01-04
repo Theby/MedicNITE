@@ -36,3 +36,7 @@ rails g scaffold cama idCama:integer idArea:integer idHabitacion:integer idSala:
 
 rails g bootstrap:themed camas
 
+rails g scaffold habitacion idHabitacion:integer idSala:integer codVisibleHabitacion:string{5} tipoHabitacion:string{20} capacidadHabitacion:integer estadoHabitacion:string{10} --no-migration 
+
+rails g bootstrap:themed habitacions
+

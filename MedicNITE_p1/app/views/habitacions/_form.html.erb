@@ -1,0 +1,44 @@
+<%= form_for @habitacion, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :idHabitacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idHabitacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idSala, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idSala, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :codVisibleHabitacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :codVisibleHabitacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :tipoHabitacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tipoHabitacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :capacidadHabitacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :capacidadHabitacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :estadoHabitacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :estadoHabitacion, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                habitacions_path, :class => 'btn' %>
+  </div>
+<% end %>
