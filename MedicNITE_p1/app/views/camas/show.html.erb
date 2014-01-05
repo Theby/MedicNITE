@@ -1,0 +1,33 @@
+<%- model_class = Cama -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-vertical">
+  <dt><strong><%= model_class.human_attribute_name(:idCama) %>:</strong></dt>
+  <dd><%= @cama.idCama %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idArea) %>:</strong></dt>
+  <dd><%= @cama.idArea %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idHabitacion) %>:</strong></dt>
+  <dd><%= @cama.idHabitacion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idSala) %>:</strong></dt>
+  <dd><%= @cama.idSala %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:codVisibleCama) %>:</strong></dt>
+  <dd><%= @cama.codVisibleCama %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estadoCama) %>:</strong></dt>
+  <dd><%= @cama.estadoCama %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipoCama) %>:</strong></dt>
+  <dd><%= @cama.tipoCama %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              camas_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_cama_path(@cama), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              cama_path(@cama),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

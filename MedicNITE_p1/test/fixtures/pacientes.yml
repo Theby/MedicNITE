@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  perIdPersona: 1
+  idPersona: 1
+  idTipoPaciente: 1
+  idEstadoPaciente: 1
+
+two:
+  perIdPersona: 1
+  idPersona: 1
+  idTipoPaciente: 1
+  idEstadoPaciente: 1

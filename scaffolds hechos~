@@ -1,0 +1,49 @@
+persona:
+
+rails g scaffold persona idPersona:integer domicilioPersona:string{40} nombresPersona:string{40} apellidosPersona:string{40} fechaNacimientoPersona:date rutPersona:string{10} --no-migration
+
+rails g bootstrap:themed personas
+
+paciente:
+
+rails g scaffold paciente perIdPersona:integer idPersona:integer idTipoPaciente:integer idEstadoPaciente:integer --no-migration
+
+rails g scaffold pacienteTipo idTipoPaciente:integer tipoPaciente:string{20} --no-migration
+
+rails g scaffold pacienteEstado idEstadoPaciente:integer estadoPaciente:string{40} --no-migration
+
+rails g bootstrap:themed paciente_tipos
+
+rails g bootstrap:themed paciente_estados
+
+personal_rubros:
+
+rails g scaffold personalRubro idPersona:integer idTipoPersonalRubro:integer especialidadPersonalRubro:string{40}
+
+rails g bootstrap:themed personalRubros
+
+rails g scaffold personalRubroTipo idTipoPersonalRubro:integer tipoPersonalRubro:string{20}
+
+rails g bootstrap:themed personalRubroTipos
+
+recintos:
+
+rails g controller recintos
+
+rails g bootstrap:themed recintos
+
+rails g scaffold cama idCama:integer idArea:integer idHabitacion:integer idSala:integer codVisibleCama:string{5} estadoCama:string{10} tipoCama:string{20} --no-migration
+
+rails g bootstrap:themed camas
+
+rails g scaffold habitacion idHabitacion:integer idSala:integer codVisibleHabitacion:string{5} tipoHabitacion:string{20} capacidadHabitacion:integer estadoHabitacion:string{10} --no-migration 
+
+rails g bootstrap:themed habitacions
+
+rails g scaffold sala idSala:integer idArea:integer codVisibleSala:string{5} tipoSala:string{20} estadoSalas:string{10} --no-migration
+
+rails g bootstrap:themed salas
+
+Áreas:
+
+rails g scaffold area idArea:integer especialidadArea:string{20} --no-migration

@@ -1,4 +1,35 @@
 MedicNITEP1::Application.routes.draw do
+<<<<<<< HEAD
+=======
+  resources :areas
+
+  resources :salas
+
+  resources :habitacions
+
+  resources :camas
+
+  resources :recintos
+
+  resources :personal_rubro_tipos
+
+  resources :personal_rubros
+
+  resources :paciente_estados
+
+  resources :paciente_tipos
+
+  resources :pacientes
+
+  resources :personas
+
+  devise_for :usuarios
+  resources :home, :dashboard, :manejo_areas, :manejo_recintos, :manejo_personas
+
+
+  root to: "home#index"
+
+>>>>>>> origin/dbtoapp
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

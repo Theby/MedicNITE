@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  idPersona: 1
+  domicilioPersona: MyString
   nombresPersona: MyString
   apellidosPersona: MyString
-  fechaNacimientoPersona: 2013-12-25
+  fechaNacimientoPersona: 2013-12-28
   rutPersona: MyString
-  domicilioPersona: MyString
 
 two:
+  idPersona: 1
+  domicilioPersona: MyString
   nombresPersona: MyString
   apellidosPersona: MyString
-  fechaNacimientoPersona: 2013-12-25
+  fechaNacimientoPersona: 2013-12-28
   rutPersona: MyString
-  domicilioPersona: MyString

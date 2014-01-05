@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idCama: 1
+  idArea: 1
+  idHabitacion: 1
+  idSala: 1
+  codVisibleCama: MyString
+  estadoCama: MyString
+  tipoCama: MyString
+
+two:
+  idCama: 1
+  idArea: 1
+  idHabitacion: 1
+  idSala: 1
+  codVisibleCama: MyString
+  estadoCama: MyString
+  tipoCama: MyString

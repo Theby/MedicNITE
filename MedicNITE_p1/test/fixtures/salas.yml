@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idSala: 1
+  idArea: 1
+  codVisibleSala: MyString
+  tipoSala: MyString
+  estadoSalas: MyString
+
+two:
+  idSala: 1
+  idArea: 1
+  codVisibleSala: MyString
+  tipoSala: MyString
+  estadoSalas: MyString

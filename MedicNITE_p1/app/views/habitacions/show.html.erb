@@ -1,0 +1,31 @@
+<%- model_class = Habitacion -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:idHabitacion) %>:</strong></dt>
+  <dd><%= @habitacion.idHabitacion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idSala) %>:</strong></dt>
+  <dd><%= @habitacion.idSala %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:codVisibleHabitacion) %>:</strong></dt>
+  <dd><%= @habitacion.codVisibleHabitacion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:tipoHabitacion) %>:</strong></dt>
+  <dd><%= @habitacion.tipoHabitacion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:capacidadHabitacion) %>:</strong></dt>
+  <dd><%= @habitacion.capacidadHabitacion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:estadoHabitacion) %>:</strong></dt>
+  <dd><%= @habitacion.estadoHabitacion %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              habitacions_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_habitacion_path(@habitacion), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              habitacion_path(@habitacion),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

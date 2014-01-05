@@ -1,0 +1,32 @@
+<%= form_for @paciente, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :perIdpersona, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :perIdpersona, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idPersona, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idPersona, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idTipoPaciente, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idTipoPaciente, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idEstadoPaciente, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idEstadoPaciente, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                pacientes_path, :class => 'btn' %>
+  </div>
+<% end %>

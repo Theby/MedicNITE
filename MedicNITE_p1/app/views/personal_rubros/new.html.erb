@@ -1,0 +1,94 @@
+<div class="panel panel-default">
+  	<div class="panel-heading">
+	    <ol class="breadcrumb">
+	    <li><a href="/"><h4>Panel de control</h4></a></li>
+	    <li><h4>/</h4></li>
+	    <li><a href="/personas"><h4>Administrar Personas</h4></a></li> 
+	    <li class="active"><h4>/ Registrar Personal Rubro</h4></li>
+  	</div>
+  	<div class="panel-body">   
+
+  	<!-- PERSONAS PARA PERSONAL MÉDICO -->
+
+  		<%= form_tag "/personal_rubros/new", :class => 'form-search', :method => 'get', :id => "paciente_personas_search" do %>
+            <p>
+			<%= text_field_tag :searchpersona, params[:searchpersona],  :class => 'input-medium search-query' %>
+            <%= submit_tag "Buscar Persona", :name => nil, :class => 'btn' %>
+            </p>
+        <% end %>  	
+
+		<%= form_for @personal_rubro, :html => { :class => 'form-horizontal' } do |f| %>
+		  
+              <h4>Seleccionar persona para registro de Paciente</h4>               
+              <!--Intento con AJAX: <div id="paciente_personas"><%#= render 'paciente_personas' %></div> -->              
+              <%- model_class = Persona -%>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Seleccionar</th>
+                    <th><%= model_class.human_attribute_name(:id) %></th>
+                    <th><%= model_class.human_attribute_name(:nombresPersona) %></th>
+                    <th><%= model_class.human_attribute_name(:apellidosPersona) %></th>
+                    <th><%= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>
+                    <th><%= model_class.human_attribute_name(:rutPersona) %></th>
+                    <th><%= model_class.human_attribute_name(:domicilioPersona) %></th>
+                    <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
+                    <th><%=t '.actions', :default => t("helpers.actions") %></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @personal_rubro_personas.each do |personal_rubro_persona| %>
+                    <tr>
+                      <td>
+                        <span class="input-group-addon">
+                          <%= f.radio_button :idPersona, personal_rubro_persona.id, :required => :true %>
+                        </span>
+                      </td>
+                      <td><%= link_to personal_rubro_persona.id, persona_path(personal_rubro_persona) %></td>
+                      <td><%= personal_rubro_persona.nombresPersona %></td>
+                      <td><%= personal_rubro_persona.apellidosPersona %></td>
+                      <td><%= personal_rubro_persona.fechaNacimientoPersona %></td>
+                      <td><%= personal_rubro_persona.rutPersona %></td>
+                      <td><%= personal_rubro_persona.domicilioPersona %></td>
+                      <!--<td><%#= persona.created_at %></td>-->
+                      <td>
+                        <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                                    edit_persona_path(personal_rubro_persona), :class => 'btn btn-mini' %>
+                        <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                                    persona_path(personal_rubro_persona),
+                                    :method => :delete,
+                                    :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Estás seguro?')) },
+                                    :class => 'btn btn-mini btn-danger' %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+              <%= will_paginate @personal_rubro_personas, renderer: BootstrapPagination::Rails %>
+
+        <!-- TIPO PERSONAL MÉDICO -->
+        	<h4>Seleccionar tipo de personal médico</h4>
+            <%- model_class = PersonalRubroTipo -%>            
+            <%= f.select :idTipoPersonalRubro,options_from_collection_for_select(@personal_rubro_tipos, 'idTipoPersonalRubro', 'tipoPersonalRubro') %>
+
+        <!-- ESPECIALIDAD PERSONAL MÉDICO -->
+        	<h4>Seleccionar especialidad del personal médico</h4>
+		    <%= f.text_field :especialidadPersonalRubro, :class => 'text_field', :required => :true %>
+			  		    
+		  <div class="form-actions">
+		    <%= f.submit nil, :class => 'btn btn-primary' %>
+		    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+		                personal_rubros_path, :class => 'btn' %>
+		  </div>
+		<% end %>
+
+	</div>
+</div>
+
+<!--
+<%#- model_class = PersonalRubro -%>
+<div class="page-header">
+  <h1><%#=t '.title', :default => [:'helpers.titles.new', 'New %{model}'], :model => model_class.model_name.human.titleize %></h1>
+</div>
+<%#= render :partial => 'form' %>
+-->

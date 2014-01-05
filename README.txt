@@ -22,7 +22,9 @@ Cualquier duda de Git me preguntan
 
 =========
 
-Set up: Cómo comenzar a trabajar y aspectos básicos necesarios
+SET UP framework To DB
+
+Cómo comenzar a trabajar y aspectos básicos necesarios
 
 0) Instalar Ruby on Rails + MySQL:
 Estos pasos quizá puedan variar para distintas distribuciones de Linux. Pero deben ser parecidas a este tutorial:
@@ -67,7 +69,31 @@ Luego de generar codigo que tiene que ver con la base de datos. Si se realiza un
 desarrollo en el framework. El sistema que se utiliza para esto, es la migración; ya que identifica lo cambiado en el 
 proyecto, y lo refleja en la base de datos. Para esto se usa el comando:
 	"rake db:migrate"
-	
+=========
+
+SET UP DB To framework
+
+BASE DE DATOS
+
+Dado que se está trabajando desde la base de datos a la aplicación, es necesario cargar el script por defecto en la consola de mysql. Para esto:
+	1.	Ingresar en la terminal: $ mysql -u root -p
+	2.	Ingresar la password del usuario de la bd.
+	3.	Ingresar a la base de datos de desarrollo:
+			mysql>	use MedicNITE_p1_development;
+	4.	Revisar que la base de datos esté vacía con:
+			mysql>	show tables;
+		Si no está vacía, botar la bd y crearla denuevo, escribir:
+			mysql>	drop database MedicNITE_p1_development;
+			mysql>	create database MedicNITE_p1_development;
+	5.	Repetir el paso 3.
+	6.	Ingresar el script por defecto llamado "script_pordefecto.sql"
+		(Hay 2 maneras para ingresar el script), copieando el contenido de este y pegarlo en la bash de mysql que usa la bd a desarrollar.
+
+¡OJO!
+CONCIDERACIONES APLICACIÓN
+
+Si se realizan scaffoldings, tener en cuenta que el campo "created_at" y "updated_at" que el scaffold crea por defecto para cada modelo, no están considerados en la db. Por lo tanto es necesario borrar los detalles en las vistas que consideran estos cambios para evitar errores. Yo solo he encontrado dificultad en una vista, en la carpeta "~/app/views/[nombre_scaffold+'s']/index.html.erb" borrar las 2 lineas en donde dice "created_at".
+
 =========
 
 GEMAS USADAS
