@@ -1,1 +1,0 @@
-Poner database.yml cuando se suba la version final
