@@ -60,17 +60,23 @@
             
           <div class="nav-collapse">
             <ul class="nav">
-              <li><%= link_to "Join Us", "#"  %></li>
-              <li><%= link_to "About", "#"  %></li>
-              <li><%= link_to "FAQ", "#"  %></li>
+              <li><%= link_to "Únete a Nosotros", "#"  %></li>
+              <li><%= link_to "Informaciones", "#"  %></li>
+              <% if usuario_signed_in? %>
+                <li><%= link_to "Mapa del Sitio", "#"  %></li>
+              <% end %>
             </ul>
 
             <div id="usuario_nav" class="usuario-nav-style">
               <% if usuario_signed_in? %>
-                <div class="texto-nav"><%= current_usuario.email %>
-                <%= link_to "Sign out", destroy_usuario_session_path, :method => :delete %></div>
+                <div class="texto-nav">
+                  <%= current_usuario.email %>
+                  <%= link_to "Salir", destroy_usuario_session_path, :method => :delete, :class => 'btn btn-custom' %>
+                </div>
               <% else %>
-                <%= link_to "Sign up", new_usuario_registration_path %> o <%= link_to "Sign in", new_usuario_session_path %>
+                <div class="boton-nav">
+                  <%= link_to "Crear Usuario", new_usuario_registration_path, :style => "visibility:hidden", :class => 'btn btn-custom' %> <%= link_to "Ingresar", new_usuario_session_path, :class => 'btn btn-custom' %>
+                </div>
               <% end %>
             </div>
 
@@ -89,10 +95,10 @@
           <% case current_usuario.nivelAutorizacion
           when 0 %><%= "Administrador Supremo" %><%
           when 1 %><%= "Administrador" %><%
-          when 2 %><%= "Administrativo Medico" %><%
-          when 3 %><%= "Personal Medico"  %><%
-          when 4 %><%= "Personal Tecnico" %><%
-          else %><%= "DonNadie" %><%
+          when 2 %><%= "Administrativo Médico" %><%
+          when 3 %><%= "Personal Médico"  %><%
+          when 4 %><%= "Personal Técnico" %><%
+          else %><%= "Desconocido" %><%
           end %>
         <p>
           <%= current_usuario.email %>
@@ -121,20 +127,19 @@
     </div> <!-- /container -->
 
     <div class="footer">
-        <div class="footer-links container">
-          <ul class="row">
-            <div class="span2 offset1"><%= link_to "Home", "/"  %></div>
-            <div class="span2 offset2"><%= link_to "FAQ", ""  %></div>
-            <div class="span2 offset2"><%= link_to "Sing In", new_usuario_session_path  %></div>
-          </ul>
-        </div>
+        <!-- <div class="footer-links container">
+            <ul class="row">
+              <div class="span2 offset1"><%= link_to "Home", "/"  %></div>
+              <div class="span2 offset2"><%= link_to "FAQ", ""  %></div>
+              <div class="span2 offset2"><%= link_to "Sing In", new_usuario_session_path  %></div>
+            </ul>
+        </div> -->
     </div>
     <div class="sub-footer">
       <div class="logo-footer thumbnails container">        
         <div class="row">
             <p>
-              <div class="span4 offset1"><p>&copy; Company 2013 <strong>MedicNITE</strong></p></div>
-              <div class="span3 offset4"><%= link_to "Volver hacia arriva", "#"  %></div>
+              <div class="span4 offset1"><p>&copy; Compañia 2013 <strong>InforNITE</strong></p></div><br/>
             </p>
           </div>
       </div>

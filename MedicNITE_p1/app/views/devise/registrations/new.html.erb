@@ -3,16 +3,16 @@
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br /> 
-  <%= f.email_field :email, :autofocus => true , :autocomplete => false, placeholder: "ejemplo@ejemplo.ej" %></div>
+  <br/><div><%= f.label :email %>
+  <%= f.email_field :email, :autofocus => true, :required => :true , :autocomplete => false, placeholder: "ejemplo@ejemplo.ej"%></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password, :autocomplete => false, placeholder: "Mínimo 8 carácteres"%></div>
+  <br/><div><%= f.label :password %>
+  <%= f.password_field :password, :required => :true, :autocomplete => false, placeholder: "Mínimo 8 carácteres"%></div>
 
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation, :autocomplete => false, placeholder: "Vuelva a escribir su contraseña"%></div>
+  <br/><div><%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, :required => :true, :autocomplete => false, placeholder: "Vuelva a escribir su contraseña"%></div>
 
-  <div><%= f.submit "Registrarse" %></div>
+  <div><%= f.submit "Registrarse", :class => 'btn btn-primary' %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
