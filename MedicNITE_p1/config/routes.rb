@@ -14,8 +14,19 @@ MedicNITEP1::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :personas, :home, :dashboard, :manejo_areas, :manejo_recintos, :manejo_personas
   devise_for :usuarios
+  resources :personas, :home, :dashboard, :manejo_areas, :manejo_recintos, :manejo_personas
+  resources :areas
+  resources :salas
+  resources :habitacions
+  resources :camas
+  resources :recintos
+  resources :personal_rubro_tipos
+  resources :personal_rubros
+  resources :paciente_estados
+  resources :paciente_tipos
+  resources :pacientes
+  resources :personas
 
   # Example resource route with options:
   #   resources :products do

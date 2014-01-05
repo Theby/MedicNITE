@@ -1,0 +1,2 @@
+module PacienteEstadosHelper
+end

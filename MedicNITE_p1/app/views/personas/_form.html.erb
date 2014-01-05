@@ -1,32 +1,38 @@
 <%= form_for @persona, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :nombresPersona, :class => 'control-label' %>
+  <div class="control-group" style="visibility: hidden;">
+    <%= f.label :idPersona, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :nombresPersona, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :apellidosPersona, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :apellidosPersona, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :fechaNacimientoPersona, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :fechaNacimientoPersona, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :rutPersona, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :rutPersona, :class => 'text_field' %>
+      <%= f.text_field :idPersona, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :domicilioPersona, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :domicilioPersona, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nombresPersona, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nombresPersona, :class => 'text_field', :required => :true %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :apellidosPersona, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :apellidosPersona, :class => 'text_field', :required => :true  %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :fechaNacimientoPersona, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.date_select :fechaNacimientoPersona, :class => 'date_select' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :rutPersona, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :rutPersona, :class => 'text_field' %>
     </div>
   </div>
 

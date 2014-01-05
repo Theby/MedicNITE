@@ -1,4 +1,3 @@
-<br></br>
 <div class="panel panel-default">
   <div class="panel-heading">
     <ol class="breadcrumb">
@@ -11,39 +10,57 @@
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        Ingresar Paciente
+        <h4><b>Administrar Pacientes</b></h4>
       </a>
     </div>
-    <div id="collapseOne" class="accordion-body collapse in">
+    <div id="collapseOne" class="accordion-body collapse">
       <div class="accordion-inner">
-        Por Implementar
+        <h4>Paso 1: Ingresar Persona </h4>
+        <%= link_to t('.Ingresar', :default => t("helpers.links.ingresar")),
+                      new_persona_path, :class => 'btn btn-primary' %>
+        <h4>Paso 2: Registrar Paciente </h4>
+        <%= link_to t('.Registrar', :default => t("helpers.links.registrar")),
+            new_paciente_path,
+            :class => 'btn btn-primary' %>   
+        <h4>Paso 3: Listar Paciente</h4>
+        <%= link_to t('.Listar', :default => t("helpers.links.listar")),
+            pacientes_path,
+            :class => 'btn btn-primary' %>
       </div>
     </div>
   </div>
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-        Ingresar Personal del Médico
+        <h4><b>Administrar Personal Médico</b></h4>
       </a>
     </div>
     <div id="collapseTwo" class="accordion-body collapse">
       <div class="accordion-inner">
-          Por Implementar
+        <h4>Paso 1: Ingresar Persona </h4>
+        <%= link_to t('.Ingresar', :default => t("helpers.links.ingresar")),
+                      new_persona_path, :class => 'btn btn-primary' %>
+        <h4>Paso 2: Registrar Personal Médico </h4>
+        <%= link_to t('.Registrar', :default => t("helpers.links.registrar")),
+            new_personal_rubro_path,
+            :class => 'btn btn-primary' %>   
+        <h4>Paso 3: Listar Personal Médico</h4>
+        <%= link_to t('.Listar', :default => t("helpers.links.listar")),
+            personal_rubros_path,
+            :class => 'btn btn-primary' %>
       </div>
     </div>
   </div>
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
-        Listar Personas
-      </a>
-    </div>
-    <div id="collapseThree" class="accordion-body collapse">
-      <div class="accordion-inner">
+  
+        <h3><b>Listar Personas</b></h3>
+      
           <%- model_class = Persona -%>
-          <div class="page-header">
-            <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
-          </div>
+          <%= form_tag "/personas", :class => 'form-search', :method => 'get', :id => "personas_search" do %>
+              <p>
+                <%= text_field_tag :searchpersona, params[:searchpersona],  :class => 'input-medium search-query' %>
+                <%= submit_tag "Buscar Persona", :name => nil, :class => 'btn' %>
+              </p>
+          <% end %>  
           <table class="table table-striped">
             <thead>
               <tr>
@@ -53,7 +70,7 @@
                 <th><%= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>
                 <th><%= model_class.human_attribute_name(:rutPersona) %></th>
                 <th><%= model_class.human_attribute_name(:domicilioPersona) %></th>
-                <th><%= model_class.human_attribute_name(:created_at) %></th>
+                <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
                 <th><%=t '.actions', :default => t("helpers.actions") %></th>
               </tr>
             </thead>
@@ -66,7 +83,7 @@
                   <td><%= persona.fechaNacimientoPersona %></td>
                   <td><%= persona.rutPersona %></td>
                   <td><%= persona.domicilioPersona %></td>
-                  <td><%=l persona.created_at %></td>
+                  <!--<td><%#= persona.created_at %></td>-->
                   <td>
                     <%= link_to t('.edit', :default => t("helpers.links.edit")),
                                 edit_persona_path(persona), :class => 'btn btn-mini' %>
@@ -80,11 +97,11 @@
               <% end %>
             </tbody>
           </table>
+          <%= will_paginate @personas, renderer: BootstrapPagination::Rails %>
 
           <%= link_to t('.new', :default => t("helpers.links.new")),
-                      new_persona_path, :class => 'btn btn-primary' %>     
-      </div>
-    </div>
+                      new_persona_path, :class => 'btn btn-primary', :style => "visibility: hidden;" %>     
+      
   </div>
 </div>
 

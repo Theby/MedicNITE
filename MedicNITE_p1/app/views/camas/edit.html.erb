@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ol class="breadcrumb">
+    <li><a href="/"><h4>Panel de control</h4></a></li>
+    <li><h4>/</h4></li>
+    <li><a href="/recintos"><h4>Administrar Recintos</h4></a></li>
+    <li class="active"><h4>/ Posicionar Cama</h4></li>
+  </div>
+  <div class="panel-body"> 
+
+		<%- model_class = Cama -%>
+		<h3><%=t '.title', :default => [:'helpers.titles.Editando', 'Editando posición de %{model}'], :model => model_class.model_name.human.titleize %></h3>
+		<%= render :partial => 'formmover' %>
+
+	</div>
+</div>

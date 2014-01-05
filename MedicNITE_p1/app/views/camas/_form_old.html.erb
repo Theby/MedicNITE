@@ -1,0 +1,50 @@
+<%= form_for @cama, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :idCama, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idCama, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idArea, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idArea, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idHabitacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idHabitacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idSala, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idSala, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :codVisibleCama, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :codVisibleCama, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :estadoCama, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :estadoCama, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :tipoCama, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tipoCama, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                camas_path, :class => 'btn' %>
+  </div>
+<% end %>

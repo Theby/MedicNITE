@@ -4,6 +4,10 @@
 </div>
 
 <dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:idPersona) %>:</strong></dt>
+  <dd><%= @persona.idPersona %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:domicilioPersona) %>:</strong></dt>
+  <dd><%= @persona.domicilioPersona %></dd>
   <dt><strong><%= model_class.human_attribute_name(:nombresPersona) %>:</strong></dt>
   <dd><%= @persona.nombresPersona %></dd>
   <dt><strong><%= model_class.human_attribute_name(:apellidosPersona) %>:</strong></dt>
@@ -12,8 +16,6 @@
   <dd><%= @persona.fechaNacimientoPersona %></dd>
   <dt><strong><%= model_class.human_attribute_name(:rutPersona) %>:</strong></dt>
   <dd><%= @persona.rutPersona %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:domicilioPersona) %>:</strong></dt>
-  <dd><%= @persona.domicilioPersona %></dd>
 </dl>
 
 <div class="form-actions">

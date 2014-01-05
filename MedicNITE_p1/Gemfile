@@ -1,9 +1,12 @@
 source 'https://rubygems.org'
-
+# Gemas para Bootstrap
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
 
+# Gema para paginación
+gem 'will_paginate', '~> 3.0.5'
+gem 'will_paginate-bootstrap', '0.2.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'

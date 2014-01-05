@@ -5,7 +5,8 @@ class PersonasController < ApplicationController
   # GET /personas
   # GET /personas.json
   def index
-    @personas = Persona.all
+    @personas = Persona.search(params[:searchpersona]).paginate(:page => params[:page], :per_page => 5)
+    
   end
 
   # GET /personas/1
@@ -25,6 +26,7 @@ class PersonasController < ApplicationController
   # POST /personas
   # POST /personas.json
   def create
+
     @persona = Persona.new(persona_params)
 
     respond_to do |format|
@@ -70,6 +72,6 @@ class PersonasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def persona_params
-      params.require(:persona).permit(:nombresPersona, :apellidosPersona, :fechaNacimientoPersona, :rutPersona, :domicilioPersona)
+      params.require(:persona).permit(:idPersona, :domicilioPersona, :nombresPersona, :apellidosPersona, :fechaNacimientoPersona, :rutPersona)
     end
 end

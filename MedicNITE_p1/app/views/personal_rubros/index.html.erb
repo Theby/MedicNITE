@@ -1,0 +1,53 @@
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ol class="breadcrumb">
+    <li><a href="/"><h4>Panel de control</h4></a></li>
+    <li><h4>/</h4></li>
+    <li><a href="/personas"><h4>Administrar Personas</h4></a></li> 
+    <li class="active"><h4>/ Listar Personal Médico</h4></li>
+  </div>
+  <div class="panel-body">   
+
+    <%- model_class = PersonalRubro -%>
+    <div class="page-header">
+      <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= model_class.human_attribute_name(:id) %></th>
+          <th><%= model_class.human_attribute_name(:idPersona) %></th>
+          <th><%= model_class.human_attribute_name(:idTipoPersonalRubro) %></th>
+          <th><%= model_class.human_attribute_name(:especialidadPersonalRubro) %></th>
+          <!--<th><%#= model_class.human_attribute_name(:created_at) %></th>-->
+          <th><%=t '.actions', :default => t("helpers.actions") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @personal_rubros.each do |personal_rubro| %>
+          <tr>
+            <td><%= link_to personal_rubro.id, personal_rubro_path(personal_rubro) %></td>
+            <td><%= personal_rubro.idPersona %></td>
+            <td><%= personal_rubro.idTipoPersonalRubro %></td>
+            <td><%= personal_rubro.especialidadPersonalRubro %></td>
+            <!--<td><%#=l personal_rubro.created_at %></td>-->
+            <td>
+              <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                          edit_personal_rubro_path(personal_rubro), :class => 'btn btn-mini' %>
+              <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                          personal_rubro_path(personal_rubro),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-mini btn-danger' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <%= link_to t('.new', :default => t("helpers.links.new")),
+                new_personal_rubro_path,
+                :class => 'btn btn-primary' %>
+  </div>
+</div>

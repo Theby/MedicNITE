@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idEstadoPaciente: 1
+  estadoPaciente: MyString
+
+two:
+  idEstadoPaciente: 1
+  estadoPaciente: MyString

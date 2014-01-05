@@ -117,12 +117,27 @@
           </div>
           
         </div><!--/row-->
-      <br></br>
-      <footer>
-        <p>InforNITE &copy; Company 2013</p>
-      </footer>
 
     </div> <!-- /container -->
 
+    <div class="footer">
+        <div class="footer-links container">
+          <ul class="row">
+            <div class="span2 offset1"><%= link_to "Home", "/"  %></div>
+            <div class="span2 offset2"><%= link_to "FAQ", ""  %></div>
+            <div class="span2 offset2"><%= link_to "Sing In", new_usuario_session_path  %></div>
+          </ul>
+        </div>
+    </div>
+    <div class="sub-footer">
+      <div class="logo-footer thumbnails container">        
+        <div class="row">
+            <p>
+              <div class="span4 offset1"><p>&copy; Company 2013 <strong>MedicNITE</strong></p></div>
+              <div class="span3 offset4"><%= link_to "Volver hacia arriva", "#"  %></div>
+            </p>
+          </div>
+      </div>
+    </div>
   </body>
 </html>
