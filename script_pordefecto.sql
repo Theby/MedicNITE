@@ -267,13 +267,21 @@ create table salas
 create table usuarios
 (
    idUsuario            int not null auto_increment,
-   idPersona            int,
-   nombreUsuario        varchar(20),
-   estadoUsuario        smallint not null,
-   codAccion            varchar(10),
-   emailUsuario         varchar(40) not null,
-   passUsuario          varchar(20),
-   nivelAutorizacion    smallint not null,
+   idPersona                   int,
+   nombreUsuario               varchar(20),
+   encrypted_password          varchar(255),
+   estadoUsuario               smallint not null default 1,
+   nivelAutorizacion           smallint not null default 0,
+   email                       varchar(255) not null,
+   codAccion                   varchar(10),   
+   reset_password_token        varchar(255),
+   reset_password_sent_at      datetime,
+   remember_created_at         datetime,
+   sign_in_count               int not null default 0,
+   current_sign_in_at          datetime,
+   last_sign_in_at             datetime,
+   current_sign_in_ip          varchar(255),
+   last_sign_in_ip             varchar(255),
    primary key (idUsuario)
 );
 
