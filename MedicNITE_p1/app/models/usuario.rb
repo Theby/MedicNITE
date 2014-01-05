@@ -3,11 +3,8 @@ class Usuario < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-<<<<<<< HEAD
   
   # Setup accessible (or protected) attributes for your model  
   # attr_accessible :email, :password, :password_confirmation  , :remember_me
-=======
   belongs_to :personal_rubro
->>>>>>> origin/dbtoapp
 end
