@@ -37,3 +37,7 @@
 .back-top {
 	color: #666;
 }
+.panel-grande {
+	overflow: scroll;
+	margin-bottom: 20px;	
+}

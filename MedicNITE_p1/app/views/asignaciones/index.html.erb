@@ -1,0 +1,75 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <ol class="breadcrumb">
+    <li><a href="/"><h4>Panel de control</h4></a></li>
+    <li class="active"><h4>/ Administrar Asignaciones</h4></li>
+  </div>
+  <div class="panel-body"> 
+
+    <div class="row-fluid panel panel-grande">
+        
+        <%- model_class = Asignacione -%>
+        <div class="page-header">
+          <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th><%= model_class.human_attribute_name(:id) %></th>
+              <th><%= model_class.human_attribute_name(:idAsignacion) %></th>
+              <th><%= model_class.human_attribute_name(:perIdPersona) %></th>
+              <th><%= model_class.human_attribute_name(:pacIdPersona) %></th>
+              <th><%= model_class.human_attribute_name(:idPersona) %></th>
+              <th><%= model_class.human_attribute_name(:idSala) %></th>
+              <th><%= model_class.human_attribute_name(:idTipoAsignacion) %></th>
+              <th><%= model_class.human_attribute_name(:idCama) %></th>
+              <th><%= model_class.human_attribute_name(:idArea) %></th>
+              <th><%= model_class.human_attribute_name(:iniFechaAsignacion) %></th>
+              <th><%= model_class.human_attribute_name(:iniHoraAsignacion) %></th>
+              <th><%= model_class.human_attribute_name(:finFechaAsignacion) %></th>
+              <th><%= model_class.human_attribute_name(:finHoraAsignacion) %></th>
+              <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
+              <th><%=t '.actions', :default => t("helpers.actions") %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @asignaciones.each do |asignacione| %>
+              <tr>
+                <td><%= link_to asignacione.id, asignacione_path(asignacione) %></td>
+                <td><%= asignacione.idAsignacion %></td>
+                <td><%= asignacione.perIdPersona %></td>
+                <td><%= asignacione.pacIdPersona %></td>
+                <td><%= asignacione.idPersona %></td>
+                <td><%= asignacione.idSala %></td>
+                <td><%= asignacione.idTipoAsignacion %></td>
+                <td><%= asignacione.idCama %></td>
+                <td><%= asignacione.idArea %></td>
+                <td><%= asignacione.iniFechaAsignacion %></td>
+                <td><%= asignacione.iniHoraAsignacion %></td>
+                <td><%= asignacione.finFechaAsignacion %></td>
+                <td><%= asignacione.finHoraAsignacion %></td>
+                <!--<td><%=l asignacione.created_at %></td> -->
+                <td>
+                  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                              edit_asignacione_path(asignacione), :class => 'btn btn-mini' %>
+                  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                              asignacione_path(asignacione),
+                              :method => :delete,
+                              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                              :class => 'btn btn-mini btn-danger' %>
+                </td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
+    </div>
+
+
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_asignacione_path,
+            :class => 'btn btn-primary' %>
+
+  </div>
+</div>

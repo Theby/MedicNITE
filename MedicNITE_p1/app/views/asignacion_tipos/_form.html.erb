@@ -1,0 +1,20 @@
+<%= form_for @asignacion_tipo, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :idTipoAsignacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idTipoAsignacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :tipoAsignacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :tipoAsignacion, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                asignacion_tipos_path, :class => 'btn' %>
+  </div>
+<% end %>
