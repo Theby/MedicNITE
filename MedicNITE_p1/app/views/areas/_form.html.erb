@@ -1,17 +1,8 @@
 <%= form_for @area, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :idArea, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :idArea, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :especialidadArea, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :especialidadArea, :class => 'text_field' %>
-    </div>
-  </div>
-
+  
+  <h4>Indique especiealidad del área médica</h4>
+  <%= f.text_field :especialidadArea, :class => 'text_field', :required => :true %>
+  
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
