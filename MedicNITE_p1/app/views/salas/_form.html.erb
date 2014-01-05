@@ -9,19 +9,12 @@
   <h4>Ingrese código de la sala</h4>
   <%= f.text_field :codVisibleSala, :class => 'text_field', :required => :true %>
   
-  <div class="control-group">
-    <%= f.label :tipoSala, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :tipoSala, :class => 'text_field', :required => :true %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :estadoSalas, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :estadoSalas, :class => 'text_field', :required => :true %>
-    </div>
-  </div>
-
+  <h4>Ingrese el tipo de sala</h4>
+  <%= f.text_field :tipoSala, :class => 'text_field', :required => :true %>
+  
+  <h4>Ingrese el estado de la sala</h4>
+  <%= f.text_field :estadoSalas, :class => 'text_field', :required => :true %>
+  
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
