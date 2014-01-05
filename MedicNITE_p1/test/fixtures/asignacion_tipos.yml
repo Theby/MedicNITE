@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idTipoAsignacion: 1
+  tipoAsignacion: MyString
+
+two:
+  idTipoAsignacion: 1
+  tipoAsignacion: MyString
