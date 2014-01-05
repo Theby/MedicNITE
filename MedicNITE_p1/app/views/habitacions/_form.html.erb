@@ -1,44 +1,76 @@
-<%= form_for @habitacion, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :idHabitacion, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :idHabitacion, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :idSala, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :idSala, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :codVisibleHabitacion, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :codVisibleHabitacion, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :tipoHabitacion, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :tipoHabitacion, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :capacidadHabitacion, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :capacidadHabitacion, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :estadoHabitacion, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :estadoHabitacion, :class => 'text_field' %>
-    </div>
-  </div>
+<%= form_tag "/habitacions/new", :class => 'form-search', :method => 'get', :id => "salas_search" do %>
+  <p>
+    <%= text_field_tag :searchsala, params[:searchsala],  :class => 'input-medium search-query' %>
+    <%= submit_tag "Buscar Sala", :name => nil, :class => 'btn' %>
+  </p>
+<% end %> 
 
-  <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
-    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                habitacions_path, :class => 'btn' %>
-  </div>
+<%= form_for @habitacion, :html => { :class => 'form-horizontal' } do |f| %>  
+
+    <!-- SELECCIONAR LA SALA A LA QUE PERTENECE LA HABITACIÓN -->
+
+    <%- model_class = Sala -%>
+    <h4>Seleccione la sala asociada</h4>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Seleccionar</th>
+          <th><%= model_class.human_attribute_name(:id) %></th>
+          <th><%= model_class.human_attribute_name(:idSala) %></th>
+          <th><%= model_class.human_attribute_name(:idArea) %></th>
+          <th><%= model_class.human_attribute_name(:codVisibleSala) %></th>
+          <th><%= model_class.human_attribute_name(:tipoSala) %></th>
+          <th><%= model_class.human_attribute_name(:estadoSalas) %></th>
+          <!--<th><%#= model_class.human_attribute_name(:created_at) %></th>-->
+          <th><%=t '.actions', :default => t("helpers.actions") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @salas.each do |sala| %>
+          <tr>
+            <td>
+              <span class="input-group-addon">
+                <%= f.radio_button :idSala, sala.id %>
+              </span>
+            </td>
+            <td><%= link_to sala.id, sala_path(sala) %></td>
+            <td><%= sala.idSala %></td>
+            <td><%= sala.idArea %></td>
+            <td><%= sala.codVisibleSala %></td>
+            <td><%= sala.tipoSala %></td>
+            <td><%= sala.estadoSalas %></td>
+            <!--<td><%#=l sala.created_at %></td>-->
+            <td>
+              <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                          edit_sala_path(sala), :class => 'btn btn-mini' %>
+              <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                          sala_path(sala),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-mini btn-danger' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= will_paginate @salas, renderer: BootstrapPagination::Rails %>
+
+ 
+    <h4>Escriba el codigo de la habitación</h4>
+    <%= f.text_field :codVisibleHabitacion, :class => 'text_field', :required => :true %>
+     
+    <h4>Escriba el tipo de habitación</h4>
+    <%= f.text_field :tipoHabitacion, :class => 'text_field', :required => :true %>
+    
+    <h4>Escriba la capacidad de la habitación</h4>
+    <%= f.text_field :capacidadHabitacion, :class => 'text_field', :type => "number", :min => "1", :required => :true %>
+     
+    <h4>Escriba el estado de la habitación</h4>
+    <%= f.text_field :estadoHabitacion, :class => 'text_field', :required => :true %>
+    
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  habitacions_path, :class => 'btn' %>
+    </div>
 <% end %>
