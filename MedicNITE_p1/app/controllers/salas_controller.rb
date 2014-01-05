@@ -16,6 +16,8 @@ class SalasController < ApplicationController
   # GET /salas/new
   def new
     @sala = Sala.new
+
+    @areas = Area.all
   end
 
   # GET /salas/1/edit

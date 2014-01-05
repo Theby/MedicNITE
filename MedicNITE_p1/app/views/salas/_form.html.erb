@@ -1,35 +1,20 @@
 <%= form_for @sala, :html => { :class => 'form-horizontal' } do |f| %>
-  <div class="control-group">
-    <%= f.label :idSala, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :idSala, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :idArea, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :idArea, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :codVisibleSala, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :codVisibleSala, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :tipoSala, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :tipoSala, :class => 'text_field' %>
-    </div>
-  </div>
-  <div class="control-group">
-    <%= f.label :estadoSalas, :class => 'control-label' %>
-    <div class="controls">
-      <%= f.text_field :estadoSalas, :class => 'text_field' %>
-    </div>
-  </div>
+  
+  <!-- SELECCIONAR EL ÁREA A LA QUE PERTENECE -->
 
+  <%- model_class = Area -%>
+  <h4>Seleccione el área asociada</h4>
+  <%= f.select :idArea ,options_from_collection_for_select(@areas, 'idArea', 'especialidadArea') %>
+
+  <h4>Ingrese código de la sala</h4>
+  <%= f.text_field :codVisibleSala, :class => 'text_field', :required => :true %>
+  
+  <h4>Ingrese el tipo de sala</h4>
+  <%= f.text_field :tipoSala, :class => 'text_field', :required => :true %>
+  
+  <h4>Ingrese el estado de la sala</h4>
+  <%= f.text_field :estadoSalas, :class => 'text_field', :required => :true %>
+  
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
