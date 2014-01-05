@@ -65,6 +65,26 @@
 		      </div>
 		    </div>
 		  </div>
+		  <div class="accordion-group">
+		    <div class="accordion-heading">
+		      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+		        <h4><b>Administrar Áreas</b></h4>
+		      </a>
+		    </div>
+		    <div id="collapseFour" class="accordion-body collapse">
+		      <div class="accordion-inner">
+
+		        <h4>Registrar Área </h4>
+		        <%= link_to t('.Registrar', :default => t("helpers.links.registrar")),
+		                      new_area_path, :class => 'btn btn-primary' %>
+
+		        <h4>Listar Áreas </h4>
+		        <%= link_to t('.Listar', :default => t("helpers.links.listar")),
+		            areas_path,
+		            :class => 'btn btn-primary' %>  
+		      </div>
+		    </div>
+		  </div>
 
 	</div>
 </div>

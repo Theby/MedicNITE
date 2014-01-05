@@ -1,10 +1,11 @@
 class CamasController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_cama, only: [:show, :edit, :update, :destroy]
 
   # GET /camas
   # GET /camas.json
   def index
-    @camas = Cama.all
+    @camas = Cama.paginate(:page => params[:page], :per_page => 5)  
   end
 
   # GET /camas/1
@@ -15,10 +16,17 @@ class CamasController < ApplicationController
   # GET /camas/new
   def new
     @cama = Cama.new
+
+    @areas = Area.all
+    @salas = Sala.all
+    @habitacions = Habitacion.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /camas/1/edit
   def edit
+    @areas = Area.all
+    @salas = Sala.all
+    @habitacions = Habitacion.paginate(:page => params[:page], :per_page => 5)
   end
 
   # POST /camas

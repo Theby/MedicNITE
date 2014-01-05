@@ -1,4 +1,5 @@
 class SalasController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_sala, only: [:show, :edit, :update, :destroy]
 
   # GET /salas

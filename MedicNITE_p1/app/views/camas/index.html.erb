@@ -13,6 +13,7 @@
     <table class="table table-striped">
       <thead>
         <tr>
+          <th>Reposicionar</th>
           <th><%= model_class.human_attribute_name(:id) %></th>
           <th><%= model_class.human_attribute_name(:idCama) %></th>
           <th><%= model_class.human_attribute_name(:idArea) %></th>
@@ -28,6 +29,8 @@
       <tbody>
         <% @camas.each do |cama| %>
           <tr>
+            <td><%= link_to t('.Mover', :default => t("helpers.links.Mover")),
+                          edit_cama_path(cama), :class => 'btn btn-mini' %></td>
             <td><%= link_to cama.id, cama_path(cama) %></td>
             <td><%= cama.idCama %></td>
             <td><%= cama.idArea %></td>
@@ -50,6 +53,7 @@
         <% end %>
       </tbody>
     </table>
+    <%= will_paginate @camas, renderer: BootstrapPagination::Rails %>
 
     <%= link_to t('.new', :default => t("helpers.links.new")),
                 new_cama_path,

@@ -1,4 +1,6 @@
 MedicNITEP1::Application.routes.draw do
+  resources :areas
+
   resources :salas
 
   resources :habitacions

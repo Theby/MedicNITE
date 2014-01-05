@@ -44,3 +44,8 @@ rails g scaffold sala idSala:integer idArea:integer codVisibleSala:string{5} tip
 
 rails g bootstrap:themed salas
 
+Áreas:
+
+rails g scaffold area idArea:integer especialidadArea:string{20} --no-migration
+
+rails g bootstrap:themed areas
