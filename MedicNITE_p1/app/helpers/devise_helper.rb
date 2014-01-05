@@ -12,9 +12,9 @@ module DeviseHelper
     return "" if resource.errors.empty?
 
     sentence = I18n.t("errors.messages.not_saved",
-                      :count => resource.errors.count)
-                      #:resource => resource.class.model_name.human.downcase)
-    messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg) }.join
+                      :count => resource.errors.count,
+                      :resource => resource.class.model_name.human.downcase)
+    messages = resource.errors.full_messages.map { |msg| content_tag(:li, msg == 'E-mail no encontrado en el sistema.' ? 'The emaasdasdil address you entered could not be found. Please try again with other information.' : msg) }.join
 
     html = <<-HTML
     <div id="error_explanation">

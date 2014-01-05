@@ -72281,3 +72281,1359 @@ Completed 200 OK in 257ms (Views: 248.9ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 15:34:39 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2013-12-31 15:57:22 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (145.9ms)
+Completed 200 OK in 2879ms (Views: 2869.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2013-12-31 15:57:25 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 212ms (Views: 209.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 15:57:25 -0300
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2013-12-31 15:57:29 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 177ms (Views: 153.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 15:57:29 -0300
+
+
+Started POST "/usuarios/sign_in" for 127.0.0.1 at 2013-12-31 15:57:44 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qJXwroKxRjl9oe/NAUE/NOIA9rOAz0C9Qfbrie55cjc=", "usuario"=>{"email"=>"esteban.gaete@usach.cl", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Ingresar"}
+  [1m[35mUsuario Load (5.4ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`email` = 'esteban.gaete@usach.cl' ORDER BY `usuarios`.`id` ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE `usuarios` SET `remember_created_at` = '2013-12-31 18:57:44', `updated_at` = '2013-12-31 18:57:44' WHERE `usuarios`.`id` = 7
+  [1m[36m (93.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE `usuarios` SET `last_sign_in_at` = '2013-12-31 18:33:49', `current_sign_in_at` = '2013-12-31 18:57:44', `sign_in_count` = 3, `updated_at` = '2013-12-31 18:57:44' WHERE `usuarios`.`id` = 7[0m
+  [1m[35m (94.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 565ms (ActiveRecord: 196.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-31 15:57:44 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (2.1ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 7 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 52ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-31 15:57:45 -0300
+Processing by DashboardController#index as HTML
+  [1m[35mUsuario Load (2.6ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 7 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered dashboard/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 341ms (Views: 323.9ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:45 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:45 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:45 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:46 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:47 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:47 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 15:57:47 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 15:57:47 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-31 15:58:16 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUsuario Load (4.9ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 7 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/dashboard
+Completed 302 Found in 26ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2013-12-31 15:58:16 -0300
+Processing by DashboardController#index as HTML
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 7 ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered dashboard/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 192ms (Views: 188.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:17 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 15:58:18 -0300
+
+
+Started DELETE "/usuarios/sign_out" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jN1mFathsBBlNY4qTX7rSt6foN6IeRbAWB+5Vd539o0="}
+  [1m[36mUsuario Load (12.6ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`id` = 7 ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.1ms)[0m  BEGIN
+  [1m[36mSQL (12.5ms)[0m  [1mUPDATE `usuarios` SET `remember_created_at` = NULL, `updated_at` = '2013-12-31 18:58:37' WHERE `usuarios`.`id` = 7[0m
+  [1m[35m (95.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 159ms (ActiveRecord: 122.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 158ms (Views: 153.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 15:58:37 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:38 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 15:58:39 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 15:58:39 -0300
+
+
+Started GET "/assets/hospitalbl1.jpeg" for 127.0.0.1 at 2013-12-31 15:58:39 -0300
+
+
+Started GET "/assets/hospitalbl3.jpeg" for 127.0.0.1 at 2013-12-31 15:58:39 -0300
+
+
+Started GET "/assets/hospitalbl2.jpeg" for 127.0.0.1 at 2013-12-31 15:58:39 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2013-12-31 15:58:40 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 161ms (Views: 150.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 15:58:40 -0300
+
+
+Started GET "/usuarios/sign_in" for 127.0.0.1 at 2013-12-31 16:29:18 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 184ms (Views: 113.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 16:29:19 -0300
+
+
+Started GET "/usuarios/password/new" for 127.0.0.1 at 2013-12-31 16:29:25 -0300
+Processing by Devise::PasswordsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 341ms (Views: 323.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 16:29:26 -0300
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:29:27 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MfifWbo6KatZbPkCHNZysyVZ+6qUUAiEJFDgy4Egw3Q=", "usuario"=>{"email"=>""}, "commit"=>"Enviar instrucciones al E-mail"}
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 367ms (Views: 324.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:28 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:29 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 16:29:30 -0300
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:29:34 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MfifWbo6KatZbPkCHNZysyVZ+6qUUAiEJFDgy4Egw3Q=", "usuario"=>{"email"=>"asdf@adsf"}, "commit"=>"Enviar instrucciones al E-mail"}
+  [1m[36mUsuario Load (13.5ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`email` = 'asdf@adsf' ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered devise/shared/_links.erb (1.0ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 195ms (Views: 149.8ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:34 -0300
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:34 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:34 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:34 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:35 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:36 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:36 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 16:29:36 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 16:29:36 -0300
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:33:57 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MfifWbo6KatZbPkCHNZysyVZ+6qUUAiEJFDgy4Egw3Q=", "usuario"=>{"email"=>"asdf@adsf"}, "commit"=>"Enviar instrucciones al E-mail"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`email` = 'asdf@adsf' ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 370ms (Views: 265.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:58 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 16:33:59 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-31 16:34:00 -0300
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:34:27 -0300
+
+SyntaxError (/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:17: syntax error, unexpected ')', expecting ':'
+...again with other information.') }.join
+...                               ^
+/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:27: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.6ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.9ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (78.9ms)
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:34:43 -0300
+
+SyntaxError (/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:17: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+... information.' :msg content_tag(:li, msg) }.join
+...                               ^):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (9.7ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (11.3ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (95.7ms)
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:35:09 -0300
+
+SyntaxError (/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:17: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...information.' : msg content_tag(:li, msg) }.join
+...                               ^):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (16.4ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.7ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (108.4ms)
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:35:43 -0300
+
+SyntaxError (/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:17: syntax error, unexpected ':', expecting '}'
+...ith other information.' : msg : content_tag(:li, msg) }.join
+...                               ^):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (11.4ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.3ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (86.4ms)
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:35:50 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MfifWbo6KatZbPkCHNZysyVZ+6qUUAiEJFDgy4Egw3Q=", "usuario"=>{"email"=>"asdf@adsf"}, "commit"=>"Enviar instrucciones al E-mail"}
+  [1m[36mUsuario Load (1.9ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`email` = 'asdf@adsf' ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 397ms (Views: 285.1ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:51 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-31 16:35:52 -0300
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:36:06 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MfifWbo6KatZbPkCHNZysyVZ+6qUUAiEJFDgy4Egw3Q=", "usuario"=>{"email"=>"asdf@adsf"}, "commit"=>"Enviar instrucciones al E-mail"}
+  [1m[35mUsuario Load (0.3ms)[0m  SELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`email` = 'asdf@adsf' ORDER BY `usuarios`.`id` ASC LIMIT 1
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 233ms (Views: 131.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:07 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-31 16:36:08 -0300
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:36:27 -0300
+
+SyntaxError (/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:17: syntax error, unexpected ':', expecting ')'
+... { |msg| content_tag(:li, msg : msg == 'E-mail no encontrado...
+...                               ^
+/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:17: syntax error, unexpected ')', expecting ':'
+...again with other information.') }.join
+...                               ^
+/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:27: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.7ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (9.2ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (8.9ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (88.6ms)
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:36:39 -0300
+
+SyntaxError (/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:17: syntax error, unexpected ')', expecting ':'
+...again with other information.') }.join
+...                               ^
+/home/tebi/Desktop/PBD/MedicNITE/MedicNITE_p1/app/helpers/devise_helper.rb:27: syntax error, unexpected keyword_end, expecting '}'):
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.8ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (12.2ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (28.9ms)
+  Rendered /home/tebi/.rvm/gems/ruby-2.0.0-p353/gems/actionpack-4.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (137.9ms)
+
+
+Started POST "/usuarios/password" for 127.0.0.1 at 2013-12-31 16:36:47 -0300
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MfifWbo6KatZbPkCHNZysyVZ+6qUUAiEJFDgy4Egw3Q=", "usuario"=>{"email"=>"asdf@adsf"}, "commit"=>"Enviar instrucciones al E-mail"}
+  [1m[36mUsuario Load (1.3ms)[0m  [1mSELECT `usuarios`.* FROM `usuarios` WHERE `usuarios`.`email` = 'asdf@adsf' ORDER BY `usuarios`.`id` ASC LIMIT 1[0m
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 258ms (Views: 138.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:48 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:48 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:48 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:49 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-31 16:36:50 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2013-12-31 16:36:50 -0300
+
+
+Started GET "/assets/favicon.ico" for 127.0.0.1 at 2013-12-31 16:36:50 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2014-01-05 15:52:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (24.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (99.3ms)
+Completed 200 OK in 2243ms (Views: 2079.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/manejo_areas.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/dashboard.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/home.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/manejo_personas.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/manejo_recintos.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/personas.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/dashboard.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:10 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/manejo_recintos.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/personas.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/manejo_areas.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/manejo_personas.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:11 -0300
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-01-05 15:52:12 -0300
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-01-05 15:52:12 -0300
+
+
+Started GET "/assets/hospitalbl1.jpeg" for 127.0.0.1 at 2014-01-05 15:52:12 -0300
+
+
+Started GET "/assets/hospitalbl2.jpeg" for 127.0.0.1 at 2014-01-05 15:52:12 -0300
+
+
+Started GET "/assets/hospitalbl3.jpeg" for 127.0.0.1 at 2014-01-05 15:52:12 -0300
+
+
+Started GET "/usuarios/sign_up" for 127.0.0.1 at 2014-01-05 15:52:32 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (5.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (406.3ms)
+Completed 200 OK in 611ms (Views: 581.4ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/logo.png" for 127.0.0.1 at 2014-01-05 15:52:33 -0300
