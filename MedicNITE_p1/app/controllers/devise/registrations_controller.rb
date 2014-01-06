@@ -1,7 +1,6 @@
 class Devise::RegistrationsController < DeviseController
-  before_filter :authenticate_usuario!
-  #prepend_before_filter :require_no_authentication!, :only => [ :new, :create, :cancel ]
-  prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy]
+  #prepend_before_filter :require_no_authentication, :only => [ :new, :create, :cancel ]
+  prepend_before_filter :authenticate_scope!, :only => [:edit, :update, :destroy, :new, :create, :cancel]
 
   # GET /resource/sign_up
   def new
@@ -16,8 +15,8 @@ class Devise::RegistrationsController < DeviseController
     if resource.save
       yield resource if block_given?
       if resource.active_for_authentication?
-        set_flash_message :notice, :signed_up if is_flashing_format?
-        sign_up(resource_name, resource)
+        #set_flash_message :notice, :signed_up if is_flashing_format?
+        #sign_up(resource_name, resource)
         respond_with resource, :location => after_sign_up_path_for(resource)
       else
         set_flash_message :notice, :"signed_up_but_#{resource.inactive_message}" if is_flashing_format?
@@ -105,7 +104,7 @@ class Devise::RegistrationsController < DeviseController
   # The path used after sign up. You need to overwrite this method
   # in your own RegistrationsController.
   def after_sign_up_path_for(resource)
-    after_sign_in_path_for(resource)
+    personas_path
   end
 
   # The path used after sign up for inactive accounts. You need to overwrite

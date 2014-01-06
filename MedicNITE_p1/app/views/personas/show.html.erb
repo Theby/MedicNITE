@@ -19,13 +19,14 @@
 </dl>
 
 <div class="form-actions">
-  <%= link_to t('.back', :default => t("helpers.links.back")),
+  <%= link_to t('.Atras', :default => t("helpers.links.atras")),
               personas_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+  <%= link_to t('.Editar', :default => t("helpers.links.editar")),
               edit_persona_path(@persona), :class => 'btn' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+  <%= link_to t('.Borrar',
+              :default => t("helpers.links.borrar")),
               persona_path(@persona),
               :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :data => { :confirm => t('.confirm', :default => '¿Estás seguro?') },
               :class => 'btn btn-danger' %>
 </div>

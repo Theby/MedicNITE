@@ -4,13 +4,13 @@
   <%= devise_error_messages! %>
 
   <br/><div><%= f.label :email %>
-  <%= f.email_field :email, :autofocus => true, :required => :true , :autocomplete => false, placeholder: "ejemplo@ejemplo.ej"%></div>
+  <%= f.email_field :email, :autofocus => true, :required => :true , :autocomplete => :false, placeholder: "ejemplo@ejemplo.ej"%></div>
 
   <br/><div><%= f.label :password %>
-  <%= f.password_field :password, :required => :true, :autocomplete => false, placeholder: "Mínimo 8 carácteres"%></div>
+  <%= f.password_field :password, :required => :true, :autocomplete => :false, placeholder: "Mínimo 8 carácteres"%></div>
 
   <br/><div><%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation, :required => :true, :autocomplete => false, placeholder: "Vuelva a escribir su contraseña"%></div>
+  <%= f.password_field :password_confirmation, :required => :true, :autocomplete => :false, placeholder: "Vuelva a escribir su contraseña"%></div>
 
   <div><%= f.submit "Registrarse", :class => 'btn btn-primary' %></div>
 <% end %>
