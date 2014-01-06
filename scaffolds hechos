@@ -52,11 +52,15 @@ rails g bootstrap:themed areas
 
 Asignaciones:
 
-rails g scaffold asignacione idAsignacion:integer perIdPersona:integer pacIdPersona:integer idPersona:integer id:integer idSala:integer idTipoAsignacion:integer idCama:integer idArea:integer iniFechaAsignacion:date iniHoraAsignacion:time finFechaAsignacion:date finHoraAsignacion:time --no-migration
+rails g scaffold asignacione idAsignacion:integer perIdPersona:integer pacIdPersona:integer idPersona:integer idUsuario:integer idSala:integer idTipoAsignacion:integer idCama:integer idArea:integer iniFechaAsignacion:date iniHoraAsignacion:time finFechaAsignacion:date finHoraAsignacion:time --no-migration
 
 rails g bootstrap:themed asignaciones
 
 rails g scaffold asignacionTipo idTipoAsignacion:integer tipoAsignacion:string{40} --no-migration
 
-
 rails g bootstrap:themed asignacionTipos
+
+rails g controller asignacionPacientes
+
+rails g controller asignacionPersonalMedicos
+

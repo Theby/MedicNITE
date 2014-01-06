@@ -1,11 +1,17 @@
-class AsignacionesController < ApplicationController
-  before_filter :authenticate_usuario!
+class AsignacionPersonalMedicosController < ApplicationController
+before_filter :authenticate_usuario!
   before_action :set_asignacione, only: [:show, :edit, :update, :destroy]
 
   # GET /asignaciones
   # GET /asignaciones.json
   def index
+    @asignacione = Asignacione.new
     @asignaciones = Asignacione.all
+    @paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
+    @permed_personas = Persona.search(params[:searchpermed]).paginate(:page => params[:page], :per_page => 5)
+    @tipo_asignaciones = AsignacionTipo.all
+    @camas = Cama.all
+    @areas = Area.all
   end
 
   # GET /asignaciones/1
@@ -15,9 +21,7 @@ class AsignacionesController < ApplicationController
 
   # GET /asignaciones/new
   def new 
-    @asignacione = Asignacione.new
-
-    @pacientes = Paciente.all
+    
   end
 
   # GET /asignaciones/1/edit

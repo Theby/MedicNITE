@@ -1,1 +1,1 @@
-json.extract! @asignacione, :id, :idAsignacion, :perIdPersona, :pacIdPersona, :idPersona, :id, :idSala, :idTipoAsignacion, :idCama, :idArea, :iniFechaAsignacion, :iniHoraAsignacion, :finFechaAsignacion, :finHoraAsignacion, :created_at, :updated_at
+json.extract! @asignacione, :id, :idAsignacion, :perIdPersona, :pacIdPersona, :idPersona, :idUsuario, :idSala, :idTipoAsignacion, :idCama, :idArea, :iniFechaAsignacion, :iniHoraAsignacion, :finFechaAsignacion, :finHoraAsignacion, :created_at, :updated_at

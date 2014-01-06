@@ -1,0 +1,156 @@
+<div class="span5">
+  <%= form_tag "/asignacion_personal_medicos", :class => 'form-search', :method => 'get', :id => "paciente_search" do %>
+      <p>
+        <%= text_field_tag :searchpaciente, params[:searchpaciente],  :class => 'input-medium search-query' %>
+        <%= submit_tag "Buscar Paciente", :name => nil, :class => 'btn' %>
+      </p>
+  <% end %>
+</div>
+<div class="span5 offset1">
+  <%= form_tag "/asignacion_personal_medicos", :class => 'form-search', :method => 'get', :id => "permed_search" do %>
+      <p>
+        <%= text_field_tag :searchpermed, params[:searchpermed],  :class => 'input-medium search-query' %>
+        <%= submit_tag "Buscar P. Médico", :name => nil, :class => 'btn' %>
+      </p>
+  <% end %>
+</div>
+
+<%= form_for @asignacione, :html => { :class => 'form-horizontal' } do |f| %>
+  
+  <!-- PACIENTE A ASIGNAR -->
+  <div class="panel span5">
+    <h4>Seleccione el paciente a asignar</h4>
+    <div class="panel-grande">
+      <%- model_class = Persona -%>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Seleccionar</th>
+            <th><%= model_class.human_attribute_name(:id) %></th>
+            <th><%= model_class.human_attribute_name(:nombresPersona) %></th>
+            <th><%= model_class.human_attribute_name(:apellidosPersona) %></th>
+            <!--<th><%#= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>-->
+            <th><%= model_class.human_attribute_name(:rutPersona) %></th>
+            <!--<th><%#= model_class.human_attribute_name(:domicilioPersona) %></th>-->
+            <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
+            <th><%=t '.actions', :default => t("helpers.actions") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @paciente_personas.each do |paciente_persona| %>
+            <tr>
+              <td>
+                <span class="input-group-addon">
+                  <%= f.radio_button :pacIdPersona, paciente_persona.id, :required => :true %>
+                </span>
+              </td>
+              <td><%= link_to paciente_persona.id, persona_path(paciente_persona) %></td>
+              <td><%= paciente_persona.nombresPersona %></td>
+              <td><%= paciente_persona.apellidosPersona %></td>
+              <!--<td><%= paciente_persona.fechaNacimientoPersona %></td>-->
+              <td><%= paciente_persona.rutPersona %></td>
+              <!--<td><%= paciente_persona.domicilioPersona %></td>-->
+              <!--<td><%#= persona.created_at %></td>-->
+              <td>
+                <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                            edit_persona_path(paciente_persona), :class => 'btn btn-mini' %>
+                <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                            persona_path(paciente_persona),
+                            :method => :delete,
+                            :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Estás seguro?')) },
+                            :class => 'btn btn-mini btn-danger' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @paciente_personas, renderer: BootstrapPagination::Rails %>
+    </div>
+  </div> <!-- Span --> 
+
+  <!-- PERSONAL MÉDICO AL QUE SE LE ASIGNA EL RECURSO -->
+  <div class="panel span5 offset1">
+    <h4>Seleccione el personal médico a cargo</h4>
+    <div class="panel-grande">
+      <%- model_class = Persona -%>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Seleccionar</th>
+            <th><%= model_class.human_attribute_name(:id) %></th>
+            <th><%= model_class.human_attribute_name(:nombresPersona) %></th>
+            <th><%= model_class.human_attribute_name(:apellidosPersona) %></th>
+            <!--<th><%#= model_class.human_attribute_name(:fechaNacimientoPersona) %></th>-->
+            <th><%= model_class.human_attribute_name(:rutPersona) %></th>
+            <!--<th><%#= model_class.human_attribute_name(:domicilioPersona) %></th>-->
+            <!--<th><%#= model_class.human_attribute_name(:created_at) %></th> -->
+            <th><%=t '.actions', :default => t("helpers.actions") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @permed_personas.each do |permed_persona| %>
+            <tr>
+              <td>
+                <span class="input-group-addon">
+                  <%= f.radio_button :idPersona, permed_persona.id, :required => :true %>
+                </span>
+              </td>
+              <td><%= link_to permed_persona.id, persona_path(permed_persona) %></td>
+              <td><%= permed_persona.nombresPersona %></td>
+              <td><%= permed_persona.apellidosPersona %></td>
+              <!--<td><%= permed_persona.fechaNacimientoPersona %></td>-->
+              <td><%= permed_persona.rutPersona %></td>
+              <!--<td><%= permed_persona.domicilioPersona %></td>-->
+              <!--<td><%#= persona.created_at %></td>-->
+              <td>
+                <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                            edit_persona_path(permed_persona), :class => 'btn btn-mini' %>
+                <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                            persona_path(permed_persona),
+                            :method => :delete,
+                            :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Estás seguro?')) },
+                            :class => 'btn btn-mini btn-danger' %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      <%= will_paginate @permed_personas, renderer: BootstrapPagination::Rails %>
+    </div>
+  </div> <!-- Span --> 
+ 
+  
+  <!-- SALA ASIGNADA PARA CIERTA CAMA -->
+  <%#= f.text_field :idSala, :class => 'text_field' %> 
+
+  <%- model_class = AsignacionTipo -%>
+  <h4>Seleccione el tipo de asignación</h4>
+  <%= f.select :idTipoAsignacion ,options_from_collection_for_select(@tipo_asignaciones, 'idTipoAsignacion', 'tipoAsignacion') %>
+
+  <%- model_class = Area -%>
+  <h4>Seleccione el área asociada a la cama</h4>
+  <%= f.select :idArea ,options_from_collection_for_select(@areas, 'idArea', 'especialidadArea') %>
+
+  <%- model_class = Cama -%>
+  <h4>Seleccione la cama que desea asignar</h4>
+  <%= f.select :idCama ,options_from_collection_for_select(@camas, 'idCama', 'codVisibleCama') %>
+
+  <h4>Seleccione la fecha de asignación</h4>
+  <%= f.date_select :iniFechaAsignacion%>
+  <h4>Seleccione hora de asignación</h4>
+  <%= f.time_select :iniHoraAsignacion %>
+   
+  <h4>Seleccione la fecha estimada de desasignación</h4>
+  <%= f.date_select :finFechaAsignacion %>
+  <h4>Seleccione hora estimada de desasignación</h4>
+  <%= f.time_select :finHoraAsignacion %>
+
+  <!-- IDENTIFICADOR USUARIO: Oculto -->
+  <%= f.text_field :idUsuario, :class => 'text_field', :value => current_usuario.id, :style => "visibility:hidden;" %>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                asignaciones_path, :class => 'btn' %>
+  </div>
+<% end %>

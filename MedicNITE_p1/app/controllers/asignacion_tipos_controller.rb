@@ -1,4 +1,5 @@
 class AsignacionTiposController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_asignacion_tipo, only: [:show, :edit, :update, :destroy]
 
   # GET /asignacion_tipos

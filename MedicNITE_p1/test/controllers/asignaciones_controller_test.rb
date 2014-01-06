@@ -18,7 +18,7 @@ class AsignacionesControllerTest < ActionController::TestCase
 
   test "should create asignacione" do
     assert_difference('Asignacione.count') do
-      post :create, asignacione: { finFechaAsignacion: @asignacione.finFechaAsignacion, finHoraAsignacion: @asignacione.finHoraAsignacion, id: @asignacione.id, idArea: @asignacione.idArea, idAsignacion: @asignacione.idAsignacion, idCama: @asignacione.idCama, idPersona: @asignacione.idPersona, idSala: @asignacione.idSala, idTipoAsignacion: @asignacione.idTipoAsignacion, iniFechaAsignacion: @asignacione.iniFechaAsignacion, iniHoraAsignacion: @asignacione.iniHoraAsignacion, pacIdPersona: @asignacione.pacIdPersona, perIdPersona: @asignacione.perIdPersona }
+      post :create, asignacione: { finFechaAsignacion: @asignacione.finFechaAsignacion, finHoraAsignacion: @asignacione.finHoraAsignacion, idArea: @asignacione.idArea, idAsignacion: @asignacione.idAsignacion, idCama: @asignacione.idCama, idPersona: @asignacione.idPersona, idSala: @asignacione.idSala, idTipoAsignacion: @asignacione.idTipoAsignacion, idUsuario: @asignacione.idUsuario, iniFechaAsignacion: @asignacione.iniFechaAsignacion, iniHoraAsignacion: @asignacione.iniHoraAsignacion, pacIdPersona: @asignacione.pacIdPersona, perIdPersona: @asignacione.perIdPersona }
     end
 
     assert_redirected_to asignacione_path(assigns(:asignacione))
@@ -35,7 +35,7 @@ class AsignacionesControllerTest < ActionController::TestCase
   end
 
   test "should update asignacione" do
-    patch :update, id: @asignacione, asignacione: { finFechaAsignacion: @asignacione.finFechaAsignacion, finHoraAsignacion: @asignacione.finHoraAsignacion, id: @asignacione.id, idArea: @asignacione.idArea, idAsignacion: @asignacione.idAsignacion, idCama: @asignacione.idCama, idPersona: @asignacione.idPersona, idSala: @asignacione.idSala, idTipoAsignacion: @asignacione.idTipoAsignacion, iniFechaAsignacion: @asignacione.iniFechaAsignacion, iniHoraAsignacion: @asignacione.iniHoraAsignacion, pacIdPersona: @asignacione.pacIdPersona, perIdPersona: @asignacione.perIdPersona }
+    patch :update, id: @asignacione, asignacione: { finFechaAsignacion: @asignacione.finFechaAsignacion, finHoraAsignacion: @asignacione.finHoraAsignacion, idArea: @asignacione.idArea, idAsignacion: @asignacione.idAsignacion, idCama: @asignacione.idCama, idPersona: @asignacione.idPersona, idSala: @asignacione.idSala, idTipoAsignacion: @asignacione.idTipoAsignacion, idUsuario: @asignacione.idUsuario, iniFechaAsignacion: @asignacione.iniFechaAsignacion, iniHoraAsignacion: @asignacione.iniHoraAsignacion, pacIdPersona: @asignacione.pacIdPersona, perIdPersona: @asignacione.perIdPersona }
     assert_redirected_to asignacione_path(assigns(:asignacione))
   end
 
