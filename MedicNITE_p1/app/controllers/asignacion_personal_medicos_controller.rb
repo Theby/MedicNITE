@@ -8,6 +8,7 @@ before_filter :authenticate_usuario!
     @asignacione = Asignacione.new
     @asignaciones = Asignacione.all
     @paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
+    @permed_personas = Persona.search(params[:searchpermed]).paginate(:page => params[:page], :per_page => 5)
     @tipo_asignaciones = AsignacionTipo.all
     @camas = Cama.all
     @areas = Area.all
