@@ -36,7 +36,7 @@ en:
       updated_not_active: "Tu contraseña se cambió correctamente."
     registrations:
       destroyed: "¡Adiós! Tu cuenta ha sido cancelada. Esperamos volver a verte pronto."
-      signed_up: "¡Bienvenido! Has sido identificado."
+      signed_up: "¡Bienvenido! Has ingresado al sistema."
       signed_up_but_inactive: "Te has registrado correctamente. Pero no has podido iniciar sesión porque no has activado tu cuenta."
       signed_up_but_locked: "Te has registrado correctamente. Pero no has podido iniciar sesión porque tu cuenta está bloqueada."
       signed_up_but_unconfirmed: "Se te ha enviado un mensaje con un enlace de confirmación. Por favor visita el enlace para activar tu cuenta."
@@ -62,12 +62,20 @@ en:
   activerecord:
     models:
       usuario: "Usuario"
+      persona:
     attributes:
       usuario:
           email: "E-mail"
           password: "Contraseña"
           password_confirmation: "Confirmación de Contraseña"
-          remember_me: "Recuerdame!"
+          remember_me: "¡Recuerdame!"
+      persona:
+          idPersona: "Id"
+          domicilioPersona: "Domicilio"
+          nombresPersona: "Nombre"
+          apellidosPersona: "Apellidos"
+          fechaNacimientoPersona: "Fecha de Nacimiento"
+          rutPersona: "RUT"
     errors:
       models:
         usuario:

@@ -43,8 +43,12 @@
         <h4>Paso 2: Registrar Personal Médico </h4>
         <%= link_to t('.Registrar', :default => t("helpers.links.registrar")),
             new_personal_rubro_path,
-            :class => 'btn btn-primary' %>   
-        <h4>Paso 3: Listar Personal Médico</h4>
+            :class => 'btn btn-primary' %> 
+        <h4>Paso 3: Crear Usuario</h4>
+        <%= link_to t('.Crear', :default => t("helpers.links.crear")),
+            new_usuario_registration_path,
+            :class => 'btn btn-primary' %>  
+        <h4>Paso 4: Listar Personal Médico</h4>
         <%= link_to t('.Listar', :default => t("helpers.links.listar")),
             personal_rubros_path,
             :class => 'btn btn-primary' %>
@@ -85,12 +89,12 @@
                   <td><%= persona.domicilioPersona %></td>
                   <!--<td><%#= persona.created_at %></td>-->
                   <td>
-                    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                    <%= link_to t('.Editar', :default => t("helpers.links.editar")),
                                 edit_persona_path(persona), :class => 'btn btn-mini' %>
-                    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                    <%= link_to t('.Borrar', :default => t("helpers.links.borrar")),
                                 persona_path(persona),
                                 :method => :delete,
-                                :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                                :data => { :confirm => t('.confirm', :default => '¿Está seguro?') },
                                 :class => 'btn btn-mini btn-danger' %>
                   </td>
                 </tr>
