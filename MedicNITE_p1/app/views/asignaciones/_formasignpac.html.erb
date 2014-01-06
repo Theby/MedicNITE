@@ -1,0 +1,109 @@
+<%= form_tag "/asignaciones/new", :class => 'form-search', :method => 'get', :id => "paciente_search" do %>
+      <p>
+        <%= text_field_tag :searchpaciente, params[:searchpaciente],  :class => 'input-medium search-query' %>
+        <%= submit_tag "Buscar Paciente", :name => nil, :class => 'btn' %>
+      </p>
+<% end %>
+<%= form_for @asignacione, :html => { :class => 'form-horizontal' } do |f| %>
+  
+  <!-- DEUDOR -->
+  <%#= f.text_field :perIdPersona, :class => 'text_field' %>
+
+  <!-- PACIENTE A ASIGNAR -->
+  <h4>Seleccione el paciente a asignar</h4>
+  <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= model_class.human_attribute_name(:id) %></th>
+          <th><%= model_class.human_attribute_name(:perIdPersona) %></th>
+          <th><%= model_class.human_attribute_name(:idPersona) %></th>
+          <th><%= model_class.human_attribute_name(:idTipoPaciente) %></th>
+          <th><%= model_class.human_attribute_name(:idEstadoPaciente) %></th>
+          <!--<th><%#= model_class.human_attribute_name(:created_at) %></th>-->
+          <th><%=t '.actions', :default => t("helpers.actions") %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @pacientes.each do |paciente| %>
+          <tr>
+            <td><%= link_to paciente.id, paciente_path(paciente) %></td>
+            <td><%= paciente.perIdPersona %></td>
+            <td><%= paciente.idPersona %></td>
+            <td><%= paciente.idTipoPaciente %></td>
+            <td><%= paciente.idEstadoPaciente %></td>
+            <!-- <td><%#= paciente.created_at %></td>  -->
+            <td>
+              <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                          edit_paciente_path(paciente), :class => 'btn btn-mini' %>
+              <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                          paciente_path(paciente),
+                          :method => :delete,
+                          :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                          :class => 'btn btn-mini btn-danger' %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= will_paginate @personas, renderer: BootstrapPagination::Rails %>
+
+  <%= f.text_field :pacIdPersona, :class => 'text_field', :required => :true %>
+  
+  <!-- PERSONA USUARIO -->
+  <%#= f.text_field :idPersona, :class => 'text_field' %>
+
+  <!-- IDENTIFICADOR USUARIO -->
+  <%= f.text_field :idUsuario, :class => 'text_field', :value => current_usuario.id, :style => "visibility:hidden;" %>
+  
+  <!-- SALA ASIGNADA PARA CIERTA CAMA -->
+  <%#= f.text_field :idSala, :class => 'text_field' %> 
+
+  <div class="control-group">
+    <%= f.label :idTipoAsignacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idTipoAsignacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idCama, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idCama, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idArea, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idArea, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :iniFechaAsignacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :iniFechaAsignacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :iniHoraAsignacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :iniHoraAsignacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :finFechaAsignacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :finFechaAsignacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :finHoraAsignacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :finHoraAsignacion, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                asignaciones_path, :class => 'btn' %>
+  </div>
+<% end %>

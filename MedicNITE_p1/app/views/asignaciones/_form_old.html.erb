@@ -24,6 +24,12 @@
     </div>
   </div>
   <div class="control-group">
+    <%= f.label :idUsuario, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idUsuario, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
     <%= f.label :idSala, :class => 'control-label' %>
     <div class="controls">
       <%= f.text_field :idSala, :class => 'text_field' %>
@@ -50,25 +56,25 @@
   <div class="control-group">
     <%= f.label :iniFechaAsignacion, :class => 'control-label' %>
     <div class="controls">
-      <%= f.date_select :iniFechaAsignacion, :class => 'date_select' %>
+      <%= f.text_field :iniFechaAsignacion, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :iniHoraAsignacion, :class => 'control-label' %>
     <div class="controls">
-      <%= f.time_select :iniHoraAsignacion, :class => 'time_select' %>
+      <%= f.text_field :iniHoraAsignacion, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :finFechaAsignacion, :class => 'control-label' %>
     <div class="controls">
-      <%= f.date_select :finFechaAsignacion, :class => 'date_select' %>
+      <%= f.text_field :finFechaAsignacion, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">
     <%= f.label :finHoraAsignacion, :class => 'control-label' %>
     <div class="controls">
-      <%= f.time_select :finHoraAsignacion, :class => 'time_select' %>
+      <%= f.text_field :finHoraAsignacion, :class => 'text_field' %>
     </div>
   </div>
 

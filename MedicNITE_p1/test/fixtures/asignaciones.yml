@@ -5,27 +5,27 @@ one:
   perIdPersona: 1
   pacIdPersona: 1
   idPersona: 1
-  id: 1
+  idUsuario: 1
   idSala: 1
   idTipoAsignacion: 1
   idCama: 1
   idArea: 1
   iniFechaAsignacion: 2014-01-05
-  iniHoraAsignacion: 2014-01-05 17:03:30
+  iniHoraAsignacion: 2014-01-05 19:52:32
   finFechaAsignacion: 2014-01-05
-  finHoraAsignacion: 2014-01-05 17:03:30
+  finHoraAsignacion: 2014-01-05 19:52:32
 
 two:
   idAsignacion: 1
   perIdPersona: 1
   pacIdPersona: 1
   idPersona: 1
-  id: 1
+  idUsuario: 1
   idSala: 1
   idTipoAsignacion: 1
   idCama: 1
   idArea: 1
   iniFechaAsignacion: 2014-01-05
-  iniHoraAsignacion: 2014-01-05 17:03:30
+  iniHoraAsignacion: 2014-01-05 19:52:32
   finFechaAsignacion: 2014-01-05
-  finHoraAsignacion: 2014-01-05 17:03:30
+  finHoraAsignacion: 2014-01-05 19:52:32

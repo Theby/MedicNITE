@@ -1,7 +1,11 @@
 MedicNITEP1::Application.routes.draw do
-  resources :asignacion_tipos
+  resources :asignacion_personal_medicos
+
+  resources :asignacion_pacientes
 
   resources :asignaciones
+
+  resources :asignacion_tipos
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
