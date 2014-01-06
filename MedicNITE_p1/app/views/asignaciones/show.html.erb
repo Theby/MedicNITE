@@ -1,9 +1,7 @@
 <%- model_class = Asignacione -%>
-<div class="page-header">
-  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
-</div>
+<h3>Asignación</h3>
 
-<dl class="dl-horizontal">
+<dl class="dl-vertical">
   <dt><strong><%= model_class.human_attribute_name(:idAsignacion) %>:</strong></dt>
   <dd><%= @asignacione.idAsignacion %></dd>
   <dt><strong><%= model_class.human_attribute_name(:perIdPersona) %>:</strong></dt>

@@ -21,6 +21,7 @@ class HabitacionsController < ApplicationController
 
   # GET /habitacions/1/edit
   def edit
+     @salas = Sala.search(params[:searchsala]).paginate(:page => params[:page], :per_page => 5)
   end
 
   # POST /habitacions

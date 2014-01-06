@@ -61,11 +61,7 @@
   
   <!-- SALA ASIGNADA PARA CIERTA CAMA -->
   <%#= f.text_field :idSala, :class => 'text_field' %> 
-
-  <%- model_class = AsignacionTipo -%>
-  <h4>Seleccione el tipo de asignación</h4>
-  <%= f.select :idTipoAsignacion ,options_from_collection_for_select(@tipo_asignaciones, 'idTipoAsignacion', 'tipoAsignacion') %>
-
+  
   <%- model_class = Area -%>
   <h4>Seleccione el área asociada a la cama</h4>
   <%= f.select :idArea ,options_from_collection_for_select(@areas, 'idArea', 'especialidadArea') %>
@@ -83,6 +79,10 @@
   <%= f.date_select :finFechaAsignacion %>
   <h4>Seleccione hora estimada de desasignación</h4>
   <%= f.time_select :finHoraAsignacion %>
+
+  <%- model_class = AsignacionTipo -%>
+  <!--<h4>Seleccione el tipo de asignación</h4>-->
+  <%= f.text_field :idTipoAsignacion, :value => "1", :style => "visibility:hidden;" %>
 
   <!-- IDENTIFICADOR USUARIO: Oculto -->
   <%= f.text_field :idUsuario, :class => 'text_field', :value => current_usuario.id, :style => "visibility:hidden;" %>

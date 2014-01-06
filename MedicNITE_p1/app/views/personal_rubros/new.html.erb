@@ -72,9 +72,10 @@
             <%= f.select :idTipoPersonalRubro,options_from_collection_for_select(@personal_rubro_tipos, 'idTipoPersonalRubro', 'tipoPersonalRubro') %>
 
         <!-- ESPECIALIDAD PERSONAL MÉDICO -->
-        	<h4>Seleccionar especialidad del personal médico</h4>
-		    <%= f.text_field :especialidadPersonalRubro, :class => 'text_field', :required => :true %>
-			  		    
+        <%- model_class = Area -%>
+        <h4>Seleccionar especialidad del personal médico</h4>
+        <%= f.select :especialidadPersonalRubro ,options_from_collection_for_select(@areas, 'especialidadArea', 'especialidadArea'), :required => :true %>
+        	   
 		  <div class="form-actions">
 		    <%= f.submit nil, :class => 'btn btn-primary' %>
 		    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

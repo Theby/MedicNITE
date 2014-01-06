@@ -387,6 +387,6 @@ RENAME TABLE historialUsuarios TO historial_usuarios;
 RENAME TABLE personalRubroTipos TO personal_rubro_tipos;
 RENAME TABLE personalRubros TO personal_rubros;
 RENAME TABLE reservaTipos TO reserva_tipos;
-
+ALTER TABLE areas MODIFY especialidadArea VARCHAR(60);
 
 

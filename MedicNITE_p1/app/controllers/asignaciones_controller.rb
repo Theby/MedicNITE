@@ -29,6 +29,19 @@ class AsignacionesController < ApplicationController
   def create
     @asignacione = Asignacione.new(asignacione_params)
 
+    # Al asignar una cama, cambiar agributo estadoCama = "Ocupada".
+    @cama = Cama.find(@asignacione.idCama)
+    if @cama != nil
+      @cama.estadoCama = "Ocupada"
+      @cama.save
+    end        
+    # Y si tiene una habitación asociada, tambien se marca como "Ocupada"
+    @habitacion = Habitacion.find(@cama.idHabitacion)
+    if @habitacion != nil
+      @habitacion.estadoHabitacion = "Ocupada"
+      @habitacion.save  
+    end
+
     respond_to do |format|
       if @asignacione.save
         format.html { redirect_to @asignacione, notice: 'Asignacione was successfully created.' }

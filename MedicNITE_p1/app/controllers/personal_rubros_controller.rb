@@ -19,6 +19,7 @@ class PersonalRubrosController < ApplicationController
 
     @personal_rubro_personas = Persona.search(params[:searchpersona]).paginate(:page => params[:page], :per_page => 5)
     @personal_rubro_tipos = PersonalRubroTipo.all
+    @areas = Area.all
 
   end
 

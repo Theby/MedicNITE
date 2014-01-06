@@ -6,11 +6,10 @@ before_filter :authenticate_usuario!
   # GET /asignaciones.json
   def index
     @asignacione = Asignacione.new
-    @asignaciones = Asignacione.all
-    @paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
-    @permed_personas = Persona.search(params[:searchpermed]).paginate(:page => params[:page], :per_page => 5)
+    @paciente_personas = Persona.joins(:paciente).search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
+    @permed_personas = Persona.joins(:personal_rubro).search(params[:searchpermed]).paginate(:page => params[:page], :per_page => 5)
     @tipo_asignaciones = AsignacionTipo.all
-    @camas = Cama.all
+    @camas = Cama.where(:estadoCama => "Disponible")
     @areas = Area.all
   end
 

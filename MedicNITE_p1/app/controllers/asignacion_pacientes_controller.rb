@@ -7,9 +7,10 @@ class AsignacionPacientesController < ApplicationController
   def index
   	@asignacione = Asignacione.new
     @asignaciones = Asignacione.all
-    @paciente_personas = Persona.search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
+
+    @paciente_personas = Persona.joins(:paciente).search(params[:searchpaciente]).paginate(:page => params[:page], :per_page => 5)
   	@tipo_asignaciones = AsignacionTipo.all
-  	@camas = Cama.all
+  	@camas = Cama.where(:estadoCama => "Disponible")
   	@areas = Area.all
   end
 
@@ -31,6 +32,7 @@ class AsignacionPacientesController < ApplicationController
   # POST /asignaciones.json
   def create
     @asignacione = Asignacione.new(asignacione_params)
+ 
 
     respond_to do |format|
       if @asignacione.save

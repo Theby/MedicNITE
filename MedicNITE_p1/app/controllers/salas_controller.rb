@@ -22,6 +22,7 @@ class SalasController < ApplicationController
 
   # GET /salas/1/edit
   def edit
+    @areas = Area.all
   end
 
   # POST /salas
