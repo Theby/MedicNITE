@@ -16,15 +16,18 @@
         <div id="collapseOne" class="accordion-body collapse">
           <div class="accordion-inner">
             <h4>Realizar Asignación </h4>
-            <%= link_to t('.Ingresar', :default => t("helpers.links.asignar")),
-                          asignacion_pacientes_path, :class => 'btn btn-primary' %>        
+            <%= link_to t('.Asignar', :default => t("helpers.links.asignar")),
+                          asignacion_pacientes_path, :class => 'btn btn-primary' %>
+            <h4>Realizar Desasignación </h4>
+            <%#= link_to t('.Desasignar', :default => t("helpers.links.desasignar")),
+                          desasignar_pacientes_path, :class => 'btn btn-primary' %>        
           </div>
         </div>
       </div>
       <div class="accordion-group">
         <div class="accordion-heading">
           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-            <h4><b>Asignar una Recurso Habitacional a un Personal Médico</b></h4>
+            <h4><b>Asignar un Recurso Habitacional a un Personal Médico</b></h4>
           </a>
         </div>
         <div id="collapseTwo" class="accordion-body collapse">

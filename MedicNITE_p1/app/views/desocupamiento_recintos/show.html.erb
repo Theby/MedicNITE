@@ -1,0 +1,27 @@
+<%- model_class = DesocupamientoRecinto -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:idDesocupamientoRecinto) %>:</strong></dt>
+  <dd><%= @desocupamiento_recinto.idDesocupamientoRecinto %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:idAsignacion) %>:</strong></dt>
+  <dd><%= @desocupamiento_recinto.idAsignacion %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:fechaDesocupamiento) %>:</strong></dt>
+  <dd><%= @desocupamiento_recinto.fechaDesocupamiento %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:horaDesocupamiento) %>:</strong></dt>
+  <dd><%= @desocupamiento_recinto.horaDesocupamiento %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              desocupamiento_recintos_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_desocupamiento_recinto_path(@desocupamiento_recinto), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              desocupamiento_recinto_path(@desocupamiento_recinto),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

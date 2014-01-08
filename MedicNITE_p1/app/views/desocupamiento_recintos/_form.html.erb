@@ -1,0 +1,32 @@
+<%= form_for @desocupamiento_recinto, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :idDesocupamientoRecinto, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idDesocupamientoRecinto, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :idAsignacion, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :idAsignacion, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :fechaDesocupamiento, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :fechaDesocupamiento, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :horaDesocupamiento, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :horaDesocupamiento, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                desocupamiento_recintos_path, :class => 'btn' %>
+  </div>
+<% end %>

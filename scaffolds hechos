@@ -64,3 +64,8 @@ rails g controller asignacionPacientes
 
 rails g controller asignacionPersonalMedicos
 
+Desocupamiento_Recintos:
+
+rails g scaffold desocupamiento_recinto idDesocupamientoRecinto:integer idAsignacion:integer fechaDesocupamiento:date horaDesocupamiento:time --no-migration
+
+rails g bootstrap:themed desocupamiento_recintos

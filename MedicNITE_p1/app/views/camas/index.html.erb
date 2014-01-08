@@ -10,6 +10,7 @@
 
     <%- model_class = Cama -%>
     <h3>Posicionando camas</h3>
+    <div class="row-fluid panel panel-grande">
     <table class="table table-striped">
       <thead>
         <tr>
@@ -54,6 +55,7 @@
       </tbody>
     </table>
     <%= will_paginate @camas, renderer: BootstrapPagination::Rails %>
+  </div>
 
     <%= link_to t('.new', :default => t("helpers.links.new")),
                 new_cama_path,

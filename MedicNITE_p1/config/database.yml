@@ -24,7 +24,7 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: MedicNITE_p1_test
+  database: MedicNITE_p1_development
   pool: 5
   username: root
   password: root
@@ -33,7 +33,7 @@ test:
 production:
   adapter: mysql2
   encoding: utf8
-  database: MedicNITE_p1_production
+  database: MedicNITE_p1_development
   pool: 5
   username: root
   password: root

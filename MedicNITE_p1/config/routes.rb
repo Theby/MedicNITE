@@ -1,4 +1,6 @@
 MedicNITEP1::Application.routes.draw do
+  resources :desocupamiento_recintos
+
   resources :asignacion_personal_medicos
 
   resources :asignacion_pacientes

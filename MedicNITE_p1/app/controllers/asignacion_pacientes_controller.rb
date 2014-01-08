@@ -14,6 +14,9 @@ class AsignacionPacientesController < ApplicationController
   	@areas = Area.all
   end
 
+  def desasignar
+
+  end
   # GET /asignaciones/1
   # GET /asignaciones/1.json
   def show

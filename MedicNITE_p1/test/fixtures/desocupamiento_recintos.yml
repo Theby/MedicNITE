@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idDesocupamientoRecinto: 1
+  idAsignacion: 1
+  fechaDesocupamiento: 2014-01-07
+  horaDesocupamiento: 2014-01-07 23:23:37
+
+two:
+  idDesocupamientoRecinto: 1
+  idAsignacion: 1
+  fechaDesocupamiento: 2014-01-07
+  horaDesocupamiento: 2014-01-07 23:23:37
