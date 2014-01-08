@@ -1,4 +1,5 @@
 class HabitacionsController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_habitacion, only: [:show, :edit, :update, :destroy]
 
   # GET /habitacions

@@ -1,4 +1,5 @@
 class DesocupamientoRecintosController < ApplicationController
+  before_filter :authenticate_usuario!
   before_action :set_desocupamiento_recinto, only: [:show, :edit, :update, :destroy]
 
   # GET /desocupamiento_recintos
