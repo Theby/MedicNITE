@@ -9,11 +9,17 @@
   <h4>Ingrese código de la sala</h4>
   <%= f.text_field :codVisibleSala, :class => 'text_field', :required => :true %>
   
-  <h4>Ingrese el tipo de sala</h4>
-  <%= f.text_field :tipoSala, :class => 'text_field', :required => :true %>
+  <h4>Seleccione el tipo de sala</h4>
+  <%= f.select :tipoSala, 
+          "<option value='Común'>Común</option>
+          <option value='Observación'>Observación</option>
+          <option value='Recuperación'>Recuperación</option>
+          <option value='Pabellon'>Pabellon</option>".html_safe %>
   
-  <h4>Ingrese el estado de la sala</h4>
-  <%= f.text_field :estadoSalas, :class => 'text_field', :required => :true %>
+  <h4>Seleccione el estado de la sala</h4>
+  <%= f.select :estadoSalas, 
+          "<option value='Disponible'>Disponible</option>
+          <option value='Ocupado'>Ocupado</option>".html_safe %>
   
   <div class="form-actions">
     <%= f.submit nil, :class => 'btn btn-primary' %>

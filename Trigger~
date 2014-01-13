@@ -1,0 +1,4 @@
+CREATE TRIGGER asignacama BEFORE INSERT ON asignaciones FOR EACH ROW 
+BEGIN
+   UPDATE camas SET estadoCama = 'Ocupado' WHERE idCama = NEW.idCama;
+END;

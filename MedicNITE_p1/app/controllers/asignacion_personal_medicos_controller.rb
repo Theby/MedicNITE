@@ -10,6 +10,7 @@ before_filter :authenticate_usuario!
     @permed_personas = Persona.joins(:personal_rubro).search(params[:searchpermed]).paginate(:page => params[:page], :per_page => 5)
     @tipo_asignaciones = AsignacionTipo.all
     @camas = Cama.where(:estadoCama => "Disponible")
+    @salas = Sala.all
     @areas = Area.all
   end
 

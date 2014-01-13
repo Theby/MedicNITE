@@ -40,18 +40,16 @@
       </div>
     </div>
 
-    <div class='row-fluid panel panel-grande'>
 
       <%- model_class = Asignacione -%>
       <h3>Listando Asignaciones</h3>
+    <div class='row-fluid panel panel-grande'>
       <table class="table table-striped">
         <thead>
           <tr>
             <th><%= model_class.human_attribute_name(:id) %></th>
             <th><%= model_class.human_attribute_name(:idAsignacion) %></th>
-            <th><%= model_class.human_attribute_name(:perIdPersona) %></th>
             <th><%= model_class.human_attribute_name(:pacIdPersona) %></th>
-            <th><%= model_class.human_attribute_name(:idPersona) %></th>
             <th><%= model_class.human_attribute_name(:idUsuario) %></th>
             <th><%= model_class.human_attribute_name(:idSala) %></th>
             <th><%= model_class.human_attribute_name(:idTipoAsignacion) %></th>
@@ -70,9 +68,7 @@
             <tr>
               <td><%= link_to asignacione.id, asignacione_path(asignacione) %></td>
               <td><%= asignacione.idAsignacion %></td>
-              <td><%= asignacione.perIdPersona %></td>
               <td><%= asignacione.pacIdPersona %></td>
-              <td><%= asignacione.idPersona %></td>
               <td><%= asignacione.idUsuario %></td>
               <td><%= asignacione.idSala %></td>
               <td><%= asignacione.idTipoAsignacion %></td>

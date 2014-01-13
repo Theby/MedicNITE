@@ -41,7 +41,7 @@
             <tr>
               <td>
                 <span class="input-group-addon">
-                  <%= f.radio_button :pacIdPersona, paciente_persona.id, :required => :true %>
+                  <%= f.radio_button :pacIdPersona, paciente_persona.id %>
                 </span>
               </td>
               <td><%= link_to paciente_persona.id, persona_path(paciente_persona) %></td>
@@ -124,8 +124,12 @@
   <%#= f.text_field :idSala, :class => 'text_field' %> 
 
   <%- model_class = Area -%>
-  <h4>Seleccione el área asociada a la cama</h4>
+  <h4>Seleccione el área asociada</h4>
   <%= f.select :idArea ,options_from_collection_for_select(@areas, 'idArea', 'especialidadArea') %>
+  
+  <%- model_class = Sala -%>
+  <h4>Seleccione la Sala asociada</h4>
+  <%= f.select :idSala ,options_from_collection_for_select(@salas, 'idSala', 'codVisibleSala') %>
 
   <%- model_class = Cama -%>
   <h4>Seleccione la cama que desea asignar</h4>
@@ -145,10 +149,10 @@
   <%= f.text_field :idUsuario, :class => 'text_field', :value => current_usuario.id, :style => "visibility:hidden;" %>
   
   <!--<h4>Seleccione el tipo de asignación</h4>-->
-  <%= f.text_field :idTipoAsignacion, :value => "Recurso Hab. a Personal Medico", :style => "visibility:hidden;" %>
+  <%= f.text_field :idTipoAsignacion, :value => 2, :style => "visibility:hidden;" %>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit "Crear Asignación", :class => 'btn btn-primary' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 asignaciones_path, :class => 'btn' %>
   </div>

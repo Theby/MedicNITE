@@ -4,10 +4,15 @@
     <%= f.text_field :codVisibleCama, :class => 'text_field', :required =>true %>
     
     <h4>Ingrese estado de la cama</h4>
-    <%= f.text_field :estadoCama, :class => 'text_field', :required =>true %>
+    <%= f.select :estadoCama, 
+          "<option value='Disponible'>Disponible</option>
+          <option value='Ocupado'>Ocupado</option>".html_safe%>
     
     <h4>Ingrese el tipo de la cama</h4>
-    <%= f.text_field :tipoCama, :class => 'text_field', :required =>true %>
+    <%= f.select :tipoCama, 
+          "<option value='Básica'>Básica</option>
+          <option value='UTI'>UTI</option>
+          <option value='UCI'>UCI</option>".html_safe%>
     
     <!-- SELECCIONAR EL ÁREA A LA QUE PERTENECE -->
 
